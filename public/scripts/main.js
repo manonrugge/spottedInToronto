@@ -11,6 +11,7 @@ function initMap() {
         zoom: 14,
         center: uluru,
         clickableIcons: true,
+        scrollwheel: false,
         styles: [{
             "elementType": "geometry",
             "stylers": [{

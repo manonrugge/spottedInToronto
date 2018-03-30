@@ -1,3 +1,61 @@
+html {
+  font-size: 62.5%;
+  font-family: "raleway", sans-serif; }
+
+.wrapper {
+  max-width: 1170px;
+  width: 90%;
+  margin: 0 auto; }
+
+body {
+  font-family: "Archivo Narrow", sans-serif; }
+
+ul {
+  list-style: none;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: grey; }
+  a:visited {
+    color: black; }
+
+#map {
+  width: 100%;
+  height: 600px;
+  background-color: grey; }
+
+.header-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 20px 50px;
+  background: white;
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1); }
+  .header-nav ul li {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 20px;
+    font-size: 1.4rem; }
+
+a:hover {
+  border-bottom: 2px solid red; }
+
+.label {
+  position: relative; }
+  .label img {
+    position: absolute;
+    left: 50px;
+    top: -40px;
+    z-index: 999;
+    width: 250px; }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -131,7 +189,47 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-#map {
-  width: 100%;
-  height: 400px;
-  background-color: grey; }
+button {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 45px;
+  width: 165px;
+  margin: 12px;
+  background-color: transparent;
+  color: black;
+  border-color: black; }
+
+.spots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.spot {
+  width: 33.33%;
+  padding: 10px; }
+
+.spot-image {
+  width: 100%; }
+
+.filters {
+  margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.4rem; }
+
+label {
+  padding: 20px; }
+
+.checkbox {
+  margin-right: 10px;
+  outline: none;
+  cursor: pointer;
+  width: 15px; }
