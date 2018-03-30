@@ -3,6 +3,10 @@
 // API KEY: AIzaSyA5HB93S_2yu6XjRk1LxECp06lcZMYImFA
 // * ajax call
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ef148cd0701704d73e30081d13ffd22e8bfa774e
 function initMap() {
     var uluru = { lat: 43.656626, lng: -79.389145 };
 
@@ -117,6 +121,7 @@ function initMap() {
         }]
 
     });
+<<<<<<< HEAD
 
     var richnmond401 = { lat: 43.648138, lng: -79.394525 };
     var graffiti = { lat: -43.647818, lng: -79.398713 };
@@ -142,3 +147,10 @@ function initMap() {
 // $(function () {
 //     spotted.init();
 // });
+=======
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+}
+>>>>>>> ef148cd0701704d73e30081d13ffd22e8bfa774e

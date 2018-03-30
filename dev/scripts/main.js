@@ -1,10 +1,18 @@
 // API KEY: AIzaSyA5HB93S_2yu6XjRk1LxECp06lcZMYImFA
 // * ajax call
 
+<<<<<<< HEAD
 function initMap() {
     const uluru = { lat: 43.656626, lng: -79.389145 };
 
     const map = new google.maps.Map(document.getElementById('map'), {
+=======
+
+function initMap() {
+    var uluru = { lat: 43.656626, lng: -79.389145 };
+    
+    var map = new google.maps.Map(document.getElementById('map'), {
+>>>>>>> ef148cd0701704d73e30081d13ffd22e8bfa774e
         zoom: 14,
         center: uluru,
         clickableIcons: true,
@@ -170,6 +178,7 @@ function initMap() {
         ]
 
     });
+<<<<<<< HEAD
 
 
     const richnmond401 = { lat: 43.648138, lng: -79.394525 };
@@ -200,3 +209,11 @@ function initMap() {
 //     spotted.init();
 // });
 
+=======
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+}
+
+>>>>>>> ef148cd0701704d73e30081d13ffd22e8bfa774e
