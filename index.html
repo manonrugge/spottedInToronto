@@ -6,14 +6,76 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Spotted in Toronto</title>
 	<link rel="stylesheet" href="public/styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700" rel="stylesheet">
 </head>
 <body>
 <!DOCTYPE html>
 <html>
 
 <body>
-	<h1>Spotted in Toronto</h1>
-	<div id="map"></div>
+	<header>
+		<nav class="header-nav">
+			<ul>
+				<li><a href="">About</a></li>
+				<li><a href="">Spots</a></li>
+				<li><a href="">Suggestions</a></li>
+			</ul>
+		</nav>
+		<div class="label">
+			<img src="./public/assets/label.svg" alt="">
+		</div>
+		<div id="map"></div>
+	</header>
+
+	
+	<section>
+		<div class="filters">
+			<label>
+				<input type="checkbox" class="option-input checkbox" CHECKED /> All
+			</label>
+			<label>
+				<input type="checkbox" class="option-input checkbox" /> Design
+			</label>
+			<label>
+				<input type="checkbox" class="option-input checkbox" /> Bar
+			</label>
+			<label>
+				<input type="checkbox" class="option-input checkbox"/> Restaurant
+			</label>
+			<label>
+				<input type="checkbox" class="option-input checkbox" /> Vintage
+			</label>
+			<label>
+				<input type="checkbox" class="option-input checkbox" /> Coffee
+			</label>
+		</div>
+	</section>
+
+	<section class="spots wrapper">
+		<div class="spot">
+			<img class="spot-image" src="./public/assets/chosen.jpg" alt="">
+			<h2>Tempered Room</h2>
+			<h3>293 Dundas Street West</h3>
+
+		</div>
+		<div class="spot">
+			<img class="spot-image" src="./public/assets/chosen.jpg" alt="">
+			<h2>Tempered Room</h2>
+			<h3>293 Dundas Street West</h3>
+		
+		</div>
+		<div class="spot">
+			<img class="spot-image" src="./public/assets/chosen.jpg" alt="">
+			<h2>Tempered Room</h2>
+			<h3>293 Dundas Street West</h3>
+		
+		</div>
+
+
+	</section>
+
+
+	
 
 	
 	<script src="public/scripts/main.js"></script>

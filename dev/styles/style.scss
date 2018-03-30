@@ -1,5 +1,40 @@
-@import 'normalize';
-@import 'theme';
-@import 'home';
+$primary: red;
+$mainFont: 'Archivo Narrow', sans-serif;
+
+html{
+    font-size: 62.5%;
+    font-family: "raleway", sans-serif;
+
+}
+
+.wrapper{
+    max-width: 1170px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+body{
+    font-family: $mainFont;
+
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+    &:visited {
+        color: black;
+    }
+}
+
+
+@import 'components/home';
+@import 'components/normalize';
+@import 'components/spots';
+@import 'components/filter';
 
 
