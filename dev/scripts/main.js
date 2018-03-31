@@ -1,7 +1,6 @@
 // API KEY: AIzaSyA5HB93S_2yu6XjRk1LxECp06lcZMYImFA
 // * ajax call
 
-
 function initMap() {
     const uluru = { lat: 43.656626, lng: -79.389145 };
     
@@ -175,8 +174,8 @@ function initMap() {
     const marker = new google.maps.Marker({
         position: uluru,
         map: map
-    });
-
-  
+    });  
 }
+
+
 

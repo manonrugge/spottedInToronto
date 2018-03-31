@@ -8,7 +8,7 @@ html {
   margin: 0 auto; }
 
 body {
-  font-family: "Archivo Narrow", sans-serif; }
+  font-family: "Apercu", sans-serif; }
 
 ul {
   list-style: none;
@@ -19,6 +19,23 @@ a {
   color: grey; }
   a:visited {
     color: black; }
+
+p {
+  font-size: 2rem;
+  line-height: 3rem; }
+
+h2 {
+  font-size: 2.4rem;
+  margin: 20px 0px 5px 0px;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 1.4rem;
+  margin: 0; }
+
+h4 {
+  font-size: 1.4rem;
+  margin: 10px 0px 25px 0px; }
 
 #map {
   width: 100%;
@@ -32,7 +49,7 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 20px 50px;
+  padding: 15px 50px;
   background: white;
   -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1); }
@@ -45,14 +62,20 @@ a {
     font-size: 1.4rem; }
 
 a:hover {
-  border-bottom: 2px solid red; }
+  border-bottom: 2px solid #0066E0; }
 
 .label {
   position: relative; }
   .label img {
     position: absolute;
     left: 50px;
-    top: -40px;
+    top: -20px;
+    z-index: 999;
+    width: 250px; }
+  .label .text-label {
+    position: absolute;
+    left: 75px;
+    top: -50px;
     z-index: 999;
     width: 250px; }
 
@@ -189,15 +212,18 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-button {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  border-radius: 45px;
-  width: 165px;
-  margin: 12px;
-  background-color: transparent;
-  color: black;
-  border-color: black; }
+h6 {
+  position: absolute;
+  background-color: #0066E0;
+  width: 40px;
+  height: 50px;
+  left: 20px;
+  top: -10px;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 2rem;
+  margin: 0; }
 
 .spots {
   display: -webkit-box;
@@ -206,14 +232,25 @@ button {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
-          flex-direction: row; }
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .spot {
-  width: 33.33%;
-  padding: 10px; }
+  background: #fff;
+  margin: 0px 20px 50px 10px;
+  border-bottom: 1px solid grey;
+  width: calc(25% - 40px);
+  position: relative; }
 
 .spot-image {
   width: 100%; }
+
+.spot-text {
+  padding-left: 20px; }
+
+h4 {
+  color: #0066E0; }
 
 .filters {
   margin: 50px 0;
@@ -223,7 +260,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.4rem; }
+  font-size: 1.8rem; }
 
 label {
   padding: 20px; }
@@ -233,3 +270,15 @@ label {
   outline: none;
   cursor: pointer;
   width: 15px; }
+
+.about-label {
+  position: relative; }
+  .about-label img {
+    position: absolute;
+    left: 50px;
+    top: -20px;
+    z-index: 999;
+    width: 250px; }
+
+.hidden {
+  display: none; }

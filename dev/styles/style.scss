@@ -1,5 +1,5 @@
-$primary: red;
-$mainFont: 'Archivo Narrow', sans-serif;
+$primary: #0066E0;
+$mainFont: 'Apercu', sans-serif;
 
 html{
     font-size: 62.5%;
@@ -31,10 +31,35 @@ a {
     }
 }
 
+p {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+    margin: 20px 0px 5px 0px;
+    text-transform: uppercase
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin: 0;
+} 
+
+h4 {
+    font-size: 1.4rem;
+    margin: 10px 0px 25px 0px;
+}
 
 @import 'components/home';
 @import 'components/normalize';
-@import 'components/spots';
+@import 'components/spotCards';
 @import 'components/filter';
+@import 'components/about';
 
+
+.hidden {
+    display: none;
+}
 
