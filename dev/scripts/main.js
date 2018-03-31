@@ -1,6 +1,7 @@
 // API KEY: AIzaSyA5HB93S_2yu6XjRk1LxECp06lcZMYImFA
 // * ajax call
 
+
 let map;
 
 function initMap() {
@@ -174,6 +175,12 @@ function initMap() {
         ]
 
     });
+
+    const marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });  
+}
 
     var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 
