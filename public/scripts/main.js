@@ -47,9 +47,15 @@ function initMap() {
         brand: { icon: 'public/assets/Marker.svg' },
         bike: { icon: 'public/assets/Marker.svg' },
         brewery: { icon: 'public/assets/Marker.svg' },
+<<<<<<< HEAD
         vintageClothing: { icon: 'public/assets/3.png' },
         vintageHousewares: { icon: 'public/assets/3.png' },
         cafes: { icon: 'public/assets/3.png' }
+=======
+        vintageClothing: { icon: 'public/assets/Marker.svg' },
+        vintageHousewares: { icon: 'public/assets/Marker.svg' },
+        cafes: { icon: 'public/assets/Marker.svg' }
+>>>>>>> d7c98375829073c508ce6cc57ff417d3ad377346
     };
 
     // DESIGN SPOTS
@@ -71,7 +77,8 @@ function initMap() {
         var marker = new google.maps.Marker({
             position: location.position,
             icon: icons['design'].icon,
-            map: map
+            map: map,
+            label: { text: '3', color: "white" }
         });
     });
 
@@ -94,7 +101,8 @@ function initMap() {
         var marker = new google.maps.Marker({
             position: location.position,
             icon: icons['brand'].icon,
-            map: map
+            map: map,
+            label: { text: '2', color: "white" }
         });
     });
 
@@ -112,15 +120,19 @@ function initMap() {
 
     var brewerySpots = [{ position: new google.maps.LatLng(bandit) }, { position: new google.maps.LatLng(halo) }, { position: new google.maps.LatLng(henderson) }, { position: new google.maps.LatLng(laylow) }, { position: new google.maps.LatLng(bellwoods) }, { position: new google.maps.LatLng(leftfield) }, { position: new google.maps.LatLng(bloodBrothers) }, { position: new google.maps.LatLng(indieAle) }, { position: new google.maps.LatLng(burdock) }, { position: new google.maps.LatLng(junction) }];
 
-    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    var labelIndex = 0;
     // Create markers
     brewerySpots.forEach(function (location) {
         var marker = new google.maps.Marker({
             position: location.position,
+<<<<<<< HEAD
             icon: icons['brewery'].icon,
             map: map
             // label: labels[labelIndex++ % labels.length]
+=======
+            icon: icons['brand'].icon,
+            map: map,
+            label: { text: '1', color: "white" }
+>>>>>>> d7c98375829073c508ce6cc57ff417d3ad377346
         });
     });
 
@@ -201,5 +213,25 @@ filterToggleDisplay();
 //         icon: icons['design'].icon,
 //         map: map,
 //         label: labels[labelIndex++ % labels.length],
+//     });
+// });
+
+// ***NUMBER TESTING
+// brewerySpots.forEach(function (location) {
+
+//     for (var i = 0; i < location.length; i++) {
+//         var image = new google.maps.MarkerImage(
+//             '{{http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=7}}' + (i + 1) + '|FF0000|000000x')
+//             // new google.maps.Size(68, 49),
+//             // new google.maps.Point(0, 0),
+//             // new google.maps.Point(19, 49));
+//     }
+
+//     const marker = new google.maps.Marker({
+//         position: location.position,
+//         icon: image,
+//         map: map,
+//         labelClass: "mapIconLabel" // the CSS class for the label
+//         // label: labels[labelIndex++ % labels.length]
 //     });
 // });
