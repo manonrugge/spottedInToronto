@@ -61,17 +61,17 @@ function initMap() {
 
     
     const icons = {
-        design: { icon: 'public/assets/1.png' },
-        brand: { icon: 'public/assets/2.png' },
-        bike: { icon: 'public/assets/3.png' },
-        brewery: { icon:'public/assets/3.png' },
+        design: { icon: 'public/assets/Marker.svg' },
+        brand: { icon: 'public/assets/Marker.svg' },
+        bike: { icon: 'public/assets/Marker.svg' },
+        brewery: { icon:'public/assets/Marker.svg' },
         vintageClothing: { icon:'public/assets/3.png' },
         vintageHousewares: { icon: 'public/assets/3.png' },
         cafes: { icon: 'public/assets/3.png' }
     };
 
 
-    // ART & DESIGN SPOTS
+    // DESIGN SPOTS
     const richnmond401 = { lat: 43.648138, lng: -79.394525 };
     const makeDen = { lat: 43.659047, lng: -79.440023 };
     const theShop = { lat: 43.652156, lng: -79.433989 };
@@ -106,7 +106,7 @@ function initMap() {
     });
     
 
-    //LOCAL BRANDS
+    //TORONTO MAKERS
     const elevenThirty = { lat: 43.652528, lng: -79.433419 };
     const ynot = { lat: 43.668808, lng: -79.466622 };
     const tdm = { lat: 43.639014, lng: -79.443965 };
@@ -173,9 +173,9 @@ function initMap() {
     brewerySpots.forEach(function (location) {
         const marker = new google.maps.Marker({
             position: location.position,
-            // icon: icons['brewery'].icon,
-            map: map,
-            label: labels[labelIndex++ % labels.length]
+            icon: icons['brewery'].icon,
+            map: map
+            // label: labels[labelIndex++ % labels.length]
         });
     });
     

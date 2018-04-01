@@ -1,10 +1,11 @@
-$primary: #0066E0;
+$primary: #F04E23;
+$secondary: #05057C;
 $mainFont: 'Sofia Pro', sans-serif;
 
 html{
     font-size: 62.5%;
     font-family: "raleway", sans-serif;
-
+    color: $secondary;
 }
 
 .wrapper{

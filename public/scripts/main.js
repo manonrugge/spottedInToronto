@@ -1,13 +1,6 @@
 'use strict';
 
 // API KEY: AIzaSyA5HB93S_2yu6XjRk1LxECp06lcZMYImFA
-<<<<<<< HEAD
-// * ajax call
-
-
-var map = void 0;
-=======
->>>>>>> 42e2a2a520a299a6e1f1b9920ed6f9dbc24ef014
 
 function initMap() {
     var toronto = { lat: 43.656626, lng: -79.389145 };
@@ -49,28 +42,17 @@ function initMap() {
             "stylers": [{ "color": "#9e9e9e" }] }]
     });
 
-<<<<<<< HEAD
-    // const marker = new google.maps.Marker({
-    //     position: toronto,
-    //     map: map
-    // });  
-
-
-    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-
-=======
->>>>>>> 42e2a2a520a299a6e1f1b9920ed6f9dbc24ef014
     var icons = {
-        design: { icon: 'public/assets/1.png' },
-        brand: { icon: 'public/assets/2.png' },
-        bike: { icon: 'public/assets/3.png' },
-        brewery: { icon: 'public/assets/3.png' },
+        design: { icon: 'public/assets/Marker.svg' },
+        brand: { icon: 'public/assets/Marker.svg' },
+        bike: { icon: 'public/assets/Marker.svg' },
+        brewery: { icon: 'public/assets/Marker.svg' },
         vintageClothing: { icon: 'public/assets/3.png' },
         vintageHousewares: { icon: 'public/assets/3.png' },
         cafes: { icon: 'public/assets/3.png' }
     };
 
-    // ART & DESIGN SPOTS
+    // DESIGN SPOTS
     var richnmond401 = { lat: 43.648138, lng: -79.394525 };
     var makeDen = { lat: 43.659047, lng: -79.440023 };
     var theShop = { lat: 43.652156, lng: -79.433989 };
@@ -93,7 +75,7 @@ function initMap() {
         });
     });
 
-    //LOCAL BRANDS
+    //TORONTO MAKERS
     var elevenThirty = { lat: 43.652528, lng: -79.433419 };
     var ynot = { lat: 43.668808, lng: -79.466622 };
     var tdm = { lat: 43.639014, lng: -79.443965 };
@@ -136,9 +118,9 @@ function initMap() {
     brewerySpots.forEach(function (location) {
         var marker = new google.maps.Marker({
             position: location.position,
-            // icon: icons['brewery'].icon,
-            map: map,
-            label: labels[labelIndex++ % labels.length]
+            icon: icons['brewery'].icon,
+            map: map
+            // label: labels[labelIndex++ % labels.length]
         });
     });
 

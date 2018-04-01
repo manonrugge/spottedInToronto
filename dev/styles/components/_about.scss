@@ -1,4 +1,22 @@
 
-.about-label {
+.label-about {
+    
     @include label();
+    left: -20px;
+    top: 0px;
 }
+
+.about {
+    position: relative;
+    margin: 100px auto;
+    background: WHITESMOKE;
+    padding: 100px 0px;
+    width: 95%;
+    p {
+        width: 80%;
+    }
+}
+
+
+
+
