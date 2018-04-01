@@ -64,7 +64,7 @@ function initMap() {
 
     const icons = {
         design: { icon: 'public/assets/1.png' },
-        fashion: { icon: 'public/assets/2.png' },
+        brand: { icon: 'public/assets/2.png' },
         bike: { icon: 'public/assets/3.png' },
         brewery: { icon:'public/assets/3.png' },
         vintageClothing: { icon:'public/assets/3.png' },
@@ -108,7 +108,7 @@ function initMap() {
     });
     
 
-    //FASHION STORES
+    //LOCAL BRANDS
     const elevenThirty = { lat: 43.652528, lng: -79.433419 };
     const ynot = { lat: 43.668808, lng: -79.466622 };
     const tdm = { lat: 43.639014, lng: -79.443965 };
@@ -120,7 +120,7 @@ function initMap() {
     const northStandard = { lat: 43.639327, lng: -79.443600 };
     const muttonhead = { lat: 43.649292, lng: -79.450086 };
 
-    const fashionSpots = [
+    const brandSpots = [
         { position: new google.maps.LatLng(elevenThirty) },
         { position: new google.maps.LatLng(ynot) },
         { position: new google.maps.LatLng(tdm) },
@@ -134,10 +134,10 @@ function initMap() {
     ];
 
     // Create markers
-    fashionSpots.forEach(function (location) {
+    brandSpots.forEach(function (location) {
         const marker = new google.maps.Marker({
             position: location.position,
-            icon: icons['fashion'].icon,
+            icon: icons['brand'].icon,
             map: map
         });
     });
