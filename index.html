@@ -33,33 +33,33 @@
 
 	<!-- filter section start -->
 	<section>
-		<div class="filters">
-			<label>
-				<input type="checkbox" name="all" class="option-input checkbox" CHECKED /> All
-			</label>
-			<label>
-				<input type="checkbox" name="design" class="option-input checkbox" /> Design
-			</label>
-			<label>
-				<input type="checkbox" name="bar" class="option-input checkbox" /> Toronto Makers
-			</label>
-			<label>
-				<input type="checkbox" name="restaurant" class="option-input checkbox"/> Micro-Breweries
-			</label>
-			<!-- <label>
-				<input type="checkbox" name="vintage" class="option-input checkbox" /> Vintage
-			</label>
-			<label>
-				<input type="checkbox" name="coffee" class="option-input checkbox" /> Coffee
-			</label> -->
+		<div class="myBtnContainer">
+			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			<button class="btn" onclick="filterSelection('design')"> Design</button>
+			<button class="btn" onclick="filterSelection('toronto-makers')"> Toronto Makers</button>
+			<button class="btn" onclick="filterSelection('micro-breweries')"> Micro-Breweries</button>
 		</div>
+		<!-- <form class="filters">
+			<label>
+				<input type="checkbox" name="filter-category" value="all" id="all" CHECKED /> All
+			</label>
+			<label>
+				<input type="checkbox" name="filter-category" value="design" id="design" /> Design
+			</label>
+			<label>
+				<input type="checkbox" name="filter-category" value="toronto-makers" id="toronto-makers" /> Toronto Makers
+			</label>
+			<label>
+				<input type="checkbox" name="filter-category" value="micro-breweries" id="micro-breweries"/> Micro-Breweries
+			</label>
+		</form> -->
 	</section>
 	<!-- filter section end -->
 
 
 	<!-- spots section start -->
 	<section class="spots wrapper">
-		<div class="spot bar ">
+		<div class="spot" data-id="temperedRoom" data-category="micro-breweries">
 			<div>
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
@@ -72,7 +72,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="spot coffee">
+		<div class="spot" data-id="graffity" data-category=" micro-breweries">
 			<div>
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
@@ -83,7 +83,7 @@
 				<h4>Coffee</h4>
 			</div>
 		</div>
-		<div class="spot vintage">
+		<div class="spot" data-id="pharmacy" data-category="toronto-makers">
 			<div>
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
@@ -94,7 +94,7 @@
 				<h4>Vintage</h4>
 			</div>
 		</div>
-		<div class="spot bar">
+		<div class="spot" data-id="capital" data-category="design">
 			<div>
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
@@ -105,7 +105,7 @@
 				<h4>Bar</h4>
 			</div>
 		</div>
-		<div class="spot coffee">
+		<div class="spot" data-id="Chosen" data-category="micro-breweries">
 			<div>
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
@@ -116,7 +116,7 @@
 				<h4>Coffee</h4>
 			</div>
 		</div>
-		<div class="spot vintage">
+		<div class="spot" data-id="communistDaughter" data-category="toronto-makers">
 			<div>
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
@@ -137,7 +137,14 @@
 			<img class="label-image" src="./public/assets/about.svg" alt="">
 		</div>
 		<div class="wrapper">	
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eveniet, libero debitis assumenda commodi modi veniam, molestiae eos voluptas incidunt, nam blanditiis id nihil doloribus possimus molestias veritatis eum accusantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eveniet, libero debitis assumenda commodi modi veniam, molestiae eos voluptas incidunt, nam blanditiis id nihil doloribus possimus molestias veritatis eum accusantium.</p>
+			<p> <span> Discover Local hot Spots</span> <br><br>We love traveling and exploring new cities and faraway lands. But, it's not always easy to get good tips on what to do in a city you do not know well. So we wanted to create an app of Toronto with all our favourite spots.
+			<br>
+			<br>
+			How awesome is it to share our knowledge and love of Toronto with others! That’s how it all started, spotted in Toronto was born, we created an app that would allow friends, visitors and curious locals to see Toronto the way we do. With a focus on our love for the tiny, the local, the fair, the unusual, the beautiful non-commercial entrepreneurs whose shops we don’t want you to walk by. It gives you other from all over the world the chance to discover Toronto’s homemade beers, meet Toronto makers, relax at a cafe, find the perfect vintage piece or try out some bike routes!
+			<br>
+			<br>
+			xoxo Christina and Manon	
+			</p>
 		</div>
 	</section>
 	<!-- about section end -->

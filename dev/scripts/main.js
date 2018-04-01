@@ -220,35 +220,91 @@ function initMap() {
     const d = { lat: 4, lng: -7 };
     const m = { lat: 4, lng: -7 };
     const o = { lat: 4, lng: -7 };    
-}    
+} 
 
 
-    function filterToggleDisplay() {
-        $('input[name=coffee]').click(function () {
-        console.log('hello')
 
-        $('.bar').toggleClass('hidden')
-        $('.vintage').toggleClass('hidden')
-    })
-    $('input[name=bar]').click(function () {
-        console.log('hello')
 
-        $('.coffee').toggleClass('hidden')
-        $('.vintage').toggleClass('hidden')
-    })
-    $('input[name=vintage]').click(function () {
-        console.log('hello')
+//     function filterToggleDisplay() {
+//         $('input[name=coffee]').click(function () {
+//         console.log('hello')
 
-        $('.coffee').toggleClass('hidden')
-        $('.bar').toggleClass('hidden')
-    })
-}
-filterToggleDisplay();
+//         $('.bar').toggleClass('hidden')
+//         $('.vintage').toggleClass('hidden')
+//     })
+//     $('input[name=bar]').click(function () {
+//         console.log('hello')
+
+//         $('.coffee').toggleClass('hidden')
+//         $('.vintage').toggleClass('hidden')
+//     })
+//     $('input[name=vintage]').click(function () {
+//         console.log('hello')
+
+//         $('.coffee').toggleClass('hidden')
+//         $('.bar').toggleClass('hidden')
+//     })
+// }
+// filterToggleDisplay();
+
+
+// let $filterCheckboxes = $('input[type="checkbox"]');
+
+// $filterCheckboxes.on('change', function () {
+
+//     const selectedFilters = {};
+
+//     $filterCheckboxes.filter(':checked').each(function () {
+
+//         if (!selectedFilters.hasOwnProperty(this.name)) {
+            
+//             selectedFilters[this.name] = [];
+//         }
+
+//         selectedFilters[this.name].push(this.value);
+        
+//     });
+
+//     // create a collection containing all of the filterable elements
+//     let $filteredResults = $('.spot');
+    
+//     // loop over the selected filter name -> (array) values pairs
+//     $.each(selectedFilters, function (name, filterValues) {
+
+//         // filter each .flower element
+//         $filteredResults = $filteredResults.filter(function () {
+
+//             let matched = false,
+//             currentFilterValues = $(this).data('category').split('');
+
+//             // loop over each category value in the current .flower's data-category
+//             $.each(currentFilterValues, function (_, currentFilterValue) {
+
+//                 // if the current category exists in the selected filters array
+//                 // set matched to true, and stop looping. as we're ORing in each
+//                 // set of filters, we only need to match once
+
+//                 if ($.inArray(currentFilterValue, filterValues) != -1) {
+//                     matched = true;
+//                     return false;
+//                 }
+//             });
+
+//             // if matched is true the current .flower element is returned
+//             return matched;
+
+//         });
+//     });
+
+//     $('.spot').hide().filter($filteredResults).show();
+//     console.log($filteredResults)
+// });
+
 
 
 // ***index????
-// var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-// var labelIndex = 0;
+// const labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//const labelIndex = 0;
 
 // // Create markers for design spots.
 // designSpots.forEach(function (location) {
@@ -264,7 +320,7 @@ filterToggleDisplay();
    // brewerySpots.forEach(function (location) {
 
     //     for (var i = 0; i < location.length; i++) {
-    //         var image = new google.maps.MarkerImage(
+    //        const image = new google.maps.MarkerImage(
     //             '{{http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=7}}' + (i + 1) + '|FF0000|000000x')
     //             // new google.maps.Size(68, 49),
     //             // new google.maps.Point(0, 0),

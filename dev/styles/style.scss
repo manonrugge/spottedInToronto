@@ -1,10 +1,21 @@
+@import url("//hello.myfonts.net/count/309b18");
+
+@font-face { 
+    font-family: 'SofiaProRegular';
+    src: url('../fonts/309B18_0_0.eot');
+    src: url('../fonts/309B18_0_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/309B18_0_0.woff2') format('woff2'),
+    url('../fonts/309B18_0_0.woff') format('woff'),
+    url('../fonts/309B18_0_0.ttf') format('truetype');
+}
+
 $primary: #F04E23;
 $secondary: #05057C;
-$mainFont: 'Sofia Pro', sans-serif;
+$background: #F5F5F5;
+$mainFont: 'SofiaProRegular', sans-serif;
 
 html{
     font-size: 62.5%;
-    font-family: "raleway", sans-serif;
     color: $secondary;
 }
 
@@ -17,6 +28,12 @@ html{
 body{
     font-family: $mainFont;
 
+}
+
+span {
+    color: $primary;
+    text-transform: uppercase;
+    line-height: 4rem;
 }
 
 ul {
