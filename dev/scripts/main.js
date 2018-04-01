@@ -176,11 +176,11 @@ function initMap() {
 
     });
 
-    const marker = new google.maps.Marker({
-        position: uluru,
-        map: map
-    });  
-}
+    // const marker = new google.maps.Marker({
+    //     position: toronto,
+    //     map: map
+    // });  
+
 
     var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 
@@ -252,6 +252,7 @@ function initMap() {
             // label: labels[labelIndex++ % labels.length],
         });
     });
+
 }
  
 
