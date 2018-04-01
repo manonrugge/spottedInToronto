@@ -2,12 +2,10 @@
 
 // API KEY: AIzaSyA5HB93S_2yu6XjRk1LxECp06lcZMYImFA
 
-var map = void 0;
-
 function initMap() {
     var toronto = { lat: 43.656626, lng: -79.389145 };
 
-    map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
         center: toronto,
         clickableIcons: true,
@@ -42,7 +40,6 @@ function initMap() {
             "stylers": [{ "color": "#c9c9c9" }] }, { "featureType": "water",
             "elementType": "labels.text.fill",
             "stylers": [{ "color": "#9e9e9e" }] }]
-
     });
 
     var icons = {
@@ -115,12 +112,15 @@ function initMap() {
 
     var brewerySpots = [{ position: new google.maps.LatLng(bandit) }, { position: new google.maps.LatLng(halo) }, { position: new google.maps.LatLng(henderson) }, { position: new google.maps.LatLng(laylow) }, { position: new google.maps.LatLng(bellwoods) }, { position: new google.maps.LatLng(leftfield) }, { position: new google.maps.LatLng(bloodBrothers) }, { position: new google.maps.LatLng(indieAle) }, { position: new google.maps.LatLng(burdock) }, { position: new google.maps.LatLng(junction) }];
 
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var labelIndex = 0;
     // Create markers
     brewerySpots.forEach(function (location) {
         var marker = new google.maps.Marker({
             position: location.position,
-            icon: icons['brewery'].icon,
-            map: map
+            // icon: icons['brewery'].icon,
+            map: map,
+            label: labels[labelIndex++ % labels.length]
         });
     });
 

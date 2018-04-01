@@ -1,11 +1,9 @@
 // API KEY: AIzaSyA5HB93S_2yu6XjRk1LxECp06lcZMYImFA
 
-let map;
-
 function initMap() {
     const toronto = { lat: 43.656626, lng: -79.389145 };
     
-    map = new google.maps.Map(document.getElementById('map'), {
+    const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
         center: toronto,
         clickableIcons: true,
@@ -59,9 +57,9 @@ function initMap() {
                 "elementType": "labels.text.fill",
                 "stylers": [ { "color": "#9e9e9e"} ]}
         ]
-
     });
 
+    
     const icons = {
         design: { icon: 'public/assets/1.png' },
         brand: { icon: 'public/assets/2.png' },
@@ -168,12 +166,16 @@ function initMap() {
         { position: new google.maps.LatLng(junction) },
     ];
 
+    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var labelIndex = 0
+;
     // Create markers
     brewerySpots.forEach(function (location) {
         const marker = new google.maps.Marker({
             position: location.position,
-            icon: icons['brewery'].icon,
-            map: map
+            // icon: icons['brewery'].icon,
+            map: map,
+            label: labels[labelIndex++ % labels.length]
         });
     });
     
