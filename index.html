@@ -17,8 +17,8 @@
 	<header>
 		<nav class="header-nav">
 			<ul>
-				<li><a href="">About</a></li>
-				<li><a href="">Spots</a></li>
+				<li><a href="#spots">Spots</a></li>
+				<li><a href="#the-idea">The Idea</a></li>
 				<li><a href="">Recommendations</a></li>
 			</ul>
 		</nav>
@@ -32,8 +32,8 @@
 
 
 	<!-- filter section start -->
-	<section>
-		<div class="myBtnContainer">
+	<section id="spots">
+		<div class="myBtnContainer" id="myBtnContainer">
 			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
 			<button class="btn" onclick="filterSelection('design')"> Design</button>
 			<button class="btn" onclick="filterSelection('toronto-makers')"> Toronto Makers</button>
@@ -57,23 +57,42 @@
 	<!-- filter section end -->
 
 
-	<!-- spots section start -->
+	<!-- spots gallery grid starts -->
 	<section class="spots wrapper">
-		<div class="spot" data-id="temperedRoom" data-category="micro-breweries">
-			<div>
+
+		<!-- design spots -->
+		<div class="spot design">
+			<div class="content">
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/chosen.jpg" alt="">
+				<img class="spot-image" src="./public/assets/richmond401.jpg" alt="richmond401 image">
 				<div class="spot-text">
-					<h2>Tempered Room</h2>
-					<h3>293 Dundas Street West</h3>
-					<h4>Bar</h4>
+					<h2>Richmond 401</h2>
+					<h3>401 Richmond St West</h3>
+					<h4>Design</h4>
 				</div>
 			</div>
 		</div>
-		<div class="spot" data-id="graffity" data-category=" micro-breweries">
-			<div>
+		<div class="spot design">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+				</div>
+				<img class="spot-image" src="./public/assets/makeDen.jpg" alt="richmond401 image">
+				<div class="spot-text">
+					<h2>The Make Den</h2>
+					<h3>1244 Bloor St West</h3>
+					<h4>Design</h4>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="spot design">
+			<div class="content">
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
 				</div>
@@ -83,8 +102,8 @@
 				<h4>Coffee</h4>
 			</div>
 		</div>
-		<div class="spot" data-id="pharmacy" data-category="toronto-makers">
-			<div>
+		<div class="spot design">
+			<div class="content">
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
 				</div>
@@ -94,8 +113,8 @@
 				<h4>Vintage</h4>
 			</div>
 		</div>
-		<div class="spot" data-id="capital" data-category="design">
-			<div>
+		<div class="spot micro-breweries">
+			<div class="content">
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
 				</div>
@@ -105,8 +124,8 @@
 				<h4>Bar</h4>
 			</div>
 		</div>
-		<div class="spot" data-id="Chosen" data-category="micro-breweries">
-			<div>
+		<div class="spot design">
+			<div class="content">
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
 				</div>
@@ -116,8 +135,8 @@
 				<h4>Coffee</h4>
 			</div>
 		</div>
-		<div class="spot" data-id="communistDaughter" data-category="toronto-makers">
-			<div>
+		<div class="spot toronto-makers">
+			<div class="content">
 				<div>
 					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
 				</div>
@@ -128,19 +147,19 @@
 			</div>
 		</div>
 	</section>
-	<!-- spots section end -->
+	<!-- spots gallery grid end -->
 
 
 	<!-- about section start -->
-	<section class="about">
-		<div class="label-about">
+	<section id="the-idea" class="theIdea">
+		<div class="label-theIdea">
 			<img class="label-image" src="./public/assets/about.svg" alt="">
 		</div>
 		<div class="wrapper">	
-			<p> <span> Discover Local hot Spots</span> <br><br>We love traveling and exploring new cities and faraway lands. But, it's not always easy to get good tips on what to do in a city you do not know well. So we wanted to create an app of Toronto with all our favourite spots.
+			<p> <span> Discover Local hot Spots</span> <br><br>We love traveling and exploring new cities and faraway lands. But, it's not always easy to get good tips on what to do in a city you do not know well. So we wanted to create an app of Toronto with all our favourite local spots to share our knowledge and love of Toronto with others!
 			<br>
 			<br>
-			How awesome is it to share our knowledge and love of Toronto with others! That’s how it all started, spotted in Toronto was born, we created an app that would allow friends, visitors and curious locals to see Toronto the way we do. With a focus on our love for the tiny, the local, the fair, the unusual, the beautiful non-commercial entrepreneurs whose shops we don’t want you to walk by. It gives you other from all over the world the chance to discover Toronto’s homemade beers, meet Toronto makers, relax at a cafe, find the perfect vintage piece or try out some bike routes!
+			 That’s how it all started, spotted in Toronto was born, we created an app that would allow friends, visitors and curious locals to see Toronto the way we do. With a love for the small, the local, the fair, the unusual, the beautiful non-commercial entrepreneurs whose shops we don’t want you to walk by. So try it out and discover Toronto’s homemade beers, meet Toronto makers, relax at a cafe, find the perfect vintage piece or try out some bike routes!
 			<br>
 			<br>
 			xoxo Christina and Manon	

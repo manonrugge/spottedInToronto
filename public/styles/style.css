@@ -1,9 +1,12 @@
+/* import Sofia Pro font */
 @import url("//hello.myfonts.net/count/309b18");
 @font-face {
   font-family: 'SofiaProRegular';
   src: url("../fonts/309B18_0_0.eot");
   src: url("../fonts/309B18_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/309B18_0_0.woff2") format("woff2"), url("../fonts/309B18_0_0.woff") format("woff"), url("../fonts/309B18_0_0.ttf") format("truetype"); }
 
+/* variable styles */
+/* main styles */
 html {
   font-size: 62.5%;
   color: #05057C; }
@@ -27,7 +30,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: grey; }
+  color: #F04E23; }
   a:visited {
     color: black; }
 
@@ -48,6 +51,7 @@ h4 {
   font-size: 1.4rem;
   margin: 10px 0px 25px 0px; }
 
+/* display google maps */
 #map {
   width: 95%;
   height: 600px;
@@ -55,6 +59,7 @@ h4 {
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
+/* Style navigation */
 .header-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,12 +79,13 @@ h4 {
 a:hover {
   border-bottom: 2px solid #F04E23; }
 
+/* Style title label */
 .label {
   position: relative; }
   .label .label-text {
     position: absolute;
     left: 75px;
-    top: -40px;
+    top: -45px;
     z-index: 999;
     width: 250px; }
 
@@ -225,16 +231,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.marker {
-  position: absolute;
-  width: 40px;
-  height: 50px;
-  left: 10px;
-  top: -10px; }
-  .marker img {
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
-
 .spots {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -251,13 +247,29 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   margin: 0px 20px 50px 10px;
   border-bottom: 1px solid #F04E23;
   width: calc(25% - 40px);
-  position: relative; }
+  position: relative;
+  display: none;
+  /* Hide all elements by default */ }
+
+.marker {
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  left: 10px;
+  top: -10px; }
+  .marker img {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 
 .spot-image {
   width: 100%; }
 
 h4 {
   color: #F04E23; }
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block; }
 
 .myBtnContainer {
   margin: 50px 0;
@@ -285,7 +297,7 @@ h4 {
   background-color: #05057C;
   color: white; }
 
-.label-about {
+.label-theIdea {
   position: absolute;
   z-index: 999;
   width: 250px;
@@ -294,14 +306,11 @@ h4 {
   left: -20px;
   top: 0px; }
 
-.about {
+.theIdea {
   position: relative;
   margin: 100px auto;
   background: #F5F5F5;
   padding: 100px 0px;
   width: 95%; }
-  .about p {
+  .theIdea p {
     width: 80%; }
-
-.hidden {
-  display: none; }

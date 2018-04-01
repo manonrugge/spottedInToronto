@@ -1,12 +1,11 @@
-
-.label-about {
+.label-theIdea{
     
     @include label();
     left: -20px;
     top: 0px;
 }
 
-.about {
+.theIdea {
     position: relative;
     margin: 100px auto;
     background: $background;

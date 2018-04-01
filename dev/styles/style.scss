@@ -1,3 +1,4 @@
+/* import Sofia Pro font */
 @import url("//hello.myfonts.net/count/309b18");
 
 @font-face { 
@@ -9,10 +10,15 @@
     url('../fonts/309B18_0_0.ttf') format('truetype');
 }
 
+/* variable styles */
+
 $primary: #F04E23;
 $secondary: #05057C;
 $background: #F5F5F5;
 $mainFont: 'SofiaProRegular', sans-serif;
+
+
+/* main styles */
 
 html{
     font-size: 62.5%;
@@ -27,7 +33,6 @@ html{
 
 body{
     font-family: $mainFont;
-
 }
 
 span {
@@ -43,7 +48,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: grey;
+    color: $primary;
     &:visited {
         color: black;
     }
@@ -76,8 +81,4 @@ h4 {
 @import 'components/filter';
 @import 'components/about';
 
-
-.hidden {
-    display: none;
-}
 
