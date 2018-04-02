@@ -144,39 +144,60 @@ function initMap() {
 
     
     // MICRO-BREWERIES
-    const bandit = { lat: 43.652517, lng: -79.449539};
-    const halo = { lat: 43.661773, lng: -79.446447 };
-    const henderson = { lat: 43.653625, lng: -79.445250 };
-    const laylow = { lat: 43.652445, lng: -79.433799 };
-    const bellwoods = { lat: 43.647108, lng: -79.420069 };
-    const leftfield = { lat: 43.673809, lng: -79.330514 };
-    const bloodBrothers = { lat: 43.669924, lng: -79.436523 };
-    const indieAle = { lat: 43.665551, lng: - 79.465349 };
-    const burdock = { lat: 43.659736, lng: -79.437849 };
-    const junction = { lat: 43.673430, lng: -79.478605 };
-    
-    const brewerySpots = [
-        { position: new google.maps.LatLng(bandit) },
-        { position: new google.maps.LatLng(halo) },
-        { position: new google.maps.LatLng(henderson) },
-        { position: new google.maps.LatLng(laylow) },
-        { position: new google.maps.LatLng(bellwoods) },
-        { position: new google.maps.LatLng(leftfield) },
-        { position: new google.maps.LatLng(bloodBrothers) },
-        { position: new google.maps.LatLng(indieAle) },
-        { position: new google.maps.LatLng(burdock) },
-        { position: new google.maps.LatLng(junction) },
+    var breweries = [
+        ['Bandit', 43.652517, -79.449539, 1],
+        ['halo', 43.661773, -79.446447, 2],
+        ['henderson', 43.653625, -79.445250, 3],
+        ['laylow', 43.652445, -79.433799, 4],
+        ['bellwoods', 43.647108, -79.420069 , 5]
     ];
 
-    // Create markers
-    brewerySpots.forEach(function (location) {
-        const marker = new google.maps.Marker({
-            position: location.position,
-            icon: icons['brand'].icon,
+    for (let i = 0; i < breweries.length; i++) {
+        var brewery = breweries[i];
+        console.log(breweries[i])
+        var marker = new google.maps.Marker({
+            position: { lat: brewery[1], lng: brewery[2] },
             map: map,
-            label:{ text: '1', color: "white" }
+            icon: icons['brand'].icon,
+            title: brewery[0],
+            label: {text: `${brewery[3]}`, color: "white" }
         });
-    });
+        console.log(brewery[1]);
+    }
+
+    // const bandit = { lat: 43.652517, lng: -79.449539};
+    // const halo = { lat: 43.661773, lng: -79.446447 };
+    // const henderson = { lat: 43.653625, lng: -79.445250 };
+    // const laylow = { lat: 43.652445, lng: -79.433799 };
+    // const bellwoods = { lat: 43.647108, lng: -79.420069 };
+    // const leftfield = { lat: 43.673809, lng: -79.330514 };
+    // const bloodBrothers = { lat: 43.669924, lng: -79.436523 };
+    // const indieAle = { lat: 43.665551, lng: - 79.465349 };
+    // const burdock = { lat: 43.659736, lng: -79.437849 };
+    // const junction = { lat: 43.673430, lng: -79.478605 };
+    
+    // const brewerySpots = [
+    //     { position: new google.maps.LatLng(bandit) },
+    //     { position: new google.maps.LatLng(halo) },
+    //     { position: new google.maps.LatLng(henderson) },
+    //     { position: new google.maps.LatLng(laylow) },
+    //     { position: new google.maps.LatLng(bellwoods) },
+    //     { position: new google.maps.LatLng(leftfield) },
+    //     { position: new google.maps.LatLng(bloodBrothers) },
+    //     { position: new google.maps.LatLng(indieAle) },
+    //     { position: new google.maps.LatLng(burdock) },
+    //     { position: new google.maps.LatLng(junction) },
+    // ];
+
+    // Create markers
+    // brewerySpots.forEach(function (location) {
+    //     const marker = new google.maps.Marker({
+    //         position: location.position,
+    //         icon: icons['brand'].icon,
+    //         map: map,
+    //         label:{ text: '1', color: "white" }
+    //     });
+    // });
     
     // BIKE ROUTES
     const graffiti = { lat: 43.647818, lng: -79.398713 };
