@@ -186,37 +186,3 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
-
-// ***index????
-// const labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-//const labelIndex = 0;
-
-// // Create markers for design spots.
-// designSpots.forEach(function (location) {
-//     const marker = new google.maps.Marker({
-//         position: location.position,
-//         icon: icons['design'].icon,
-//         map: map,
-//         label: labels[labelIndex++ % labels.length],
-//     });
-// });
-
-// ***NUMBER TESTING
-// brewerySpots.forEach(function (location) {
-
-//     for (var i = 0; i < location.length; i++) {
-//        const image = new google.maps.MarkerImage(
-//             '{{http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=7}}' + (i + 1) + '|FF0000|000000x')
-//             // new google.maps.Size(68, 49),
-//             // new google.maps.Point(0, 0),
-//             // new google.maps.Point(19, 49));
-//     }
-
-//     const marker = new google.maps.Marker({
-//         position: location.position,
-//         icon: image,
-//         map: map,
-//         labelClass: "mapIconLabel" // the CSS class for the label
-//         // label: labels[labelIndex++ % labels.length]
-//     });
-// });
