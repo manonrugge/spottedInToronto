@@ -1,10 +1,28 @@
-$primary: #0066E0;
-$mainFont: 'Apercu', sans-serif;
+/* import Sofia Pro font */
+@import url("//hello.myfonts.net/count/309b18");
+
+@font-face { 
+    font-family: 'SofiaProRegular';
+    src: url('../fonts/309B18_0_0.eot');
+    src: url('../fonts/309B18_0_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/309B18_0_0.woff2') format('woff2'),
+    url('../fonts/309B18_0_0.woff') format('woff'),
+    url('../fonts/309B18_0_0.ttf') format('truetype');
+}
+
+/* variable styles */
+
+$primary: #F04E23;
+$secondary: #05057C;
+$background: #F5F5F5;
+$mainFont: 'SofiaProRegular', sans-serif;
+
+
+/* main styles */
 
 html{
     font-size: 62.5%;
-    font-family: "raleway", sans-serif;
-
+    color: $secondary;
 }
 
 .wrapper{
@@ -15,7 +33,12 @@ html{
 
 body{
     font-family: $mainFont;
+}
 
+span {
+    color: $primary;
+    text-transform: uppercase;
+    line-height: 4rem;
 }
 
 ul {
@@ -25,7 +48,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: grey;
+    color: $primary;
     &:visited {
         color: black;
     }
@@ -52,14 +75,22 @@ h4 {
     margin: 10px 0px 25px 0px;
 }
 
+footer {
+    width: 100%;
+    background-color: $secondary;
+     .copyright {
+        color: white;
+        font-size: 1.4rem;
+        padding: 10px;
+        text-align: center;
+        margin: 0;
+    }
+}
+
 @import 'components/home';
 @import 'components/normalize';
 @import 'components/spotCards';
 @import 'components/filter';
 @import 'components/about';
 
-
-.hidden {
-    display: none;
-}
 
