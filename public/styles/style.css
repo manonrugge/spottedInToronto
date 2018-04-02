@@ -51,13 +51,28 @@ h4 {
   font-size: 1.4rem;
   margin: 10px 0px 25px 0px; }
 
+footer {
+  width: 100%;
+  background-color: #05057C; }
+  footer .copyright {
+    color: white;
+    font-size: 1.4rem;
+    padding: 10px;
+    text-align: center;
+    margin: 0; }
+
 /* display google maps */
 #map {
   width: 95%;
   height: 600px;
   margin: 0 auto;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  z-index: 0; }
+
+@media (max-width: 740px) {
+  header {
+    margin-top: 70px; } }
 
 /* Style navigation */
 .header-nav ul {
@@ -74,7 +89,10 @@ h4 {
         -ms-flex-direction: row;
             flex-direction: row;
     padding: 20px;
-    font-size: 1.4rem; }
+    font-size: 1.6rem; }
+  @media (max-width: 740px) {
+    .header-nav ul {
+      display: none; } }
 
 a:hover {
   border-bottom: 2px solid #F04E23; }
@@ -250,6 +268,16 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   position: relative;
   display: none;
   /* Hide all elements by default */ }
+  @media (max-width: 1060px) {
+    .spot {
+      width: calc(33.33% - 40px); } }
+  @media (max-width: 960px) {
+    .spot {
+      width: calc(50% - 40px); } }
+  @media (max-width: 540px) {
+    .spot {
+      width: calc(100% - 40px);
+      margin: 25px auto; } }
 
 .marker {
   position: absolute;
@@ -276,10 +304,20 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1.8rem; }
+  @media (max-width: 760px) {
+    .myBtnContainer {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 /* Style the buttons */
 .btn {
@@ -289,6 +327,9 @@ h4 {
   background-color: white;
   cursor: pointer;
   margin: 0px 5px; }
+  @media (max-width: 760px) {
+    .btn {
+      margin: 5px 10px; } }
 
 .btn:hover {
   background-color: #F5F5F5; }
@@ -296,6 +337,20 @@ h4 {
 .btn.active {
   background-color: #05057C;
   color: white; }
+
+.the-idea {
+  position: relative;
+  margin: 100px auto;
+  background: #F5F5F5;
+  padding: 100px 0px;
+  width: 95%; }
+  .the-idea p {
+    width: 80%;
+    margin: 0 auto; }
+    @media (max-width: 540px) {
+      .the-idea p {
+        font-size: 1.6rem;
+        line-height: 2.5rem; } }
 
 .label-theIdea {
   position: absolute;
@@ -305,12 +360,3 @@ h4 {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   left: -20px;
   top: 0px; }
-
-.theIdea {
-  position: relative;
-  margin: 100px auto;
-  background: #F5F5F5;
-  padding: 100px 0px;
-  width: 95%; }
-  .theIdea p {
-    width: 80%; }

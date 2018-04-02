@@ -43,17 +43,17 @@ function initMap() {
     });
 
     var icons = {
-        design: { icon: 'public/assets/Marker.svg' },
-        brand: { icon: 'public/assets/Marker.svg' },
-        bike: { icon: 'public/assets/Marker.svg' },
-        brewery: { icon: 'public/assets/Marker.svg' },
-        vintageClothing: { icon: 'public/assets/Marker.svg' },
-        vintageHousewares: { icon: 'public/assets/Marker.svg' },
-        cafes: { icon: 'public/assets/Marker.svg' }
+        design: { icon: './public/assets/Marker.svg' },
+        brand: { icon: './public/assets/Marker.svg' },
+        bike: { icon: './public/assets/Marker.svg' },
+        brewery: { icon: './public/assets/Marker.svg' },
+        vintageClothing: { icon: './public/assets/Marker.svg' },
+        vintageHousewares: { icon: './public/assets/Marker.svg' },
+        cafes: { icon: './public/assets/Marker.svg' }
     };
 
     // DESIGN SPOTS
-    var richnmond401 = { lat: 43.648138, lng: -79.394525 };
+    var richmond401 = { lat: 43.648138, lng: -79.394525 };
     var makeDen = { lat: 43.659047, lng: -79.440023 };
     var theShop = { lat: 43.652156, lng: -79.433989 };
     var artAndSole = { lat: 43.660275, lng: -79.329488 };
@@ -64,7 +64,7 @@ function initMap() {
     var artMetropole = { lat: 43.649778, lng: -79.431774 };
     var harbourfront = { lat: 43.638749, lng: -79.382722 };
 
-    var designSpots = [{ position: new google.maps.LatLng(richnmond401) }, { position: new google.maps.LatLng(makeDen) }, { position: new google.maps.LatLng(theShop) }, { position: new google.maps.LatLng(artAndSole) }, { position: new google.maps.LatLng(workroom) }, { position: new google.maps.LatLng(artscape) }, { position: new google.maps.LatLng(mocca) }, { position: new google.maps.LatLng(designExchange) }, { position: new google.maps.LatLng(artMetropole) }, { position: new google.maps.LatLng(harbourfront) }];
+    var designSpots = [{ position: new google.maps.LatLng(richmond401) }, { position: new google.maps.LatLng(makeDen) }, { position: new google.maps.LatLng(theShop) }, { position: new google.maps.LatLng(artAndSole) }, { position: new google.maps.LatLng(workroom) }, { position: new google.maps.LatLng(artscape) }, { position: new google.maps.LatLng(mocca) }, { position: new google.maps.LatLng(designExchange) }, { position: new google.maps.LatLng(artMetropole) }, { position: new google.maps.LatLng(harbourfront) }];
 
     // Create markers
     designSpots.forEach(function (location) {
@@ -168,19 +168,24 @@ function initMap() {
     var o = { lat: 4, lng: -7 };
 }
 
+// filter functionality goes here
+
 filterSelection("all");
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("spot");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+function filterSelection(content) {
+    var spot = void 0,
+        i = void 0;
+    spot = document.getElementsByClassName("spot");
+    if (content == "all") content = "";
+    for (i = 0; i < spot.length; i++) {
+        RemoveClass(spot[i], "show");
+        if (spot[i].className.indexOf(content) > -1) AddClass(spot[i], "show");
     }
 }
 
 function AddClass(element, name) {
-    var i, arr1, arr2;
+    var i = void 0,
+        arr1 = void 0,
+        arr2 = void 0;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
     for (i = 0; i < arr2.length; i++) {
@@ -191,7 +196,9 @@ function AddClass(element, name) {
 }
 
 function RemoveClass(element, name) {
-    var i, arr1, arr2;
+    var i = void 0,
+        arr1 = void 0,
+        arr2 = void 0;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
     for (i = 0; i < arr2.length; i++) {
@@ -202,7 +209,6 @@ function RemoveClass(element, name) {
     element.className = arr1.join(" ");
 }
 
-// Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
@@ -212,82 +218,6 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
-
-//     function filterToggleDisplay() {
-//         $('input[name=coffee]').click(function () {
-//         console.log('hello')
-
-//         $('.bar').toggleClass('hidden')
-//         $('.vintage').toggleClass('hidden')
-//     })
-//     $('input[name=bar]').click(function () {
-//         console.log('hello')
-
-//         $('.coffee').toggleClass('hidden')
-//         $('.vintage').toggleClass('hidden')
-//     })
-//     $('input[name=vintage]').click(function () {
-//         console.log('hello')
-
-//         $('.coffee').toggleClass('hidden')
-//         $('.bar').toggleClass('hidden')
-//     })
-// }
-// filterToggleDisplay();
-
-
-// let $filterCheckboxes = $('input[type="checkbox"]');
-
-// $filterCheckboxes.on('change', function () {
-
-//     const selectedFilters = {};
-
-//     $filterCheckboxes.filter(':checked').each(function () {
-
-//         if (!selectedFilters.hasOwnProperty(this.name)) {
-
-//             selectedFilters[this.name] = [];
-//         }
-
-//         selectedFilters[this.name].push(this.value);
-
-//     });
-
-//     // create a collection containing all of the filterable elements
-//     let $filteredResults = $('.spot');
-
-//     // loop over the selected filter name -> (array) values pairs
-//     $.each(selectedFilters, function (name, filterValues) {
-
-//         // filter each .flower element
-//         $filteredResults = $filteredResults.filter(function () {
-
-//             let matched = false,
-//             currentFilterValues = $(this).data('category').split('');
-
-//             // loop over each category value in the current .flower's data-category
-//             $.each(currentFilterValues, function (_, currentFilterValue) {
-
-//                 // if the current category exists in the selected filters array
-//                 // set matched to true, and stop looping. as we're ORing in each
-//                 // set of filters, we only need to match once
-
-//                 if ($.inArray(currentFilterValue, filterValues) != -1) {
-//                     matched = true;
-//                     return false;
-//                 }
-//             });
-
-//             // if matched is true the current .flower element is returned
-//             return matched;
-
-//         });
-//     });
-
-//     $('.spot').hide().filter($filteredResults).show();
-//     console.log($filteredResults)
-// });
-
 
 // ***index????
 // const labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';

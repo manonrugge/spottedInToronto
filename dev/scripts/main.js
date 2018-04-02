@@ -61,18 +61,18 @@ function initMap() {
 
     
     const icons = {
-        design: { icon: 'public/assets/Marker.svg' },
-        brand: { icon: 'public/assets/Marker.svg' },
-        bike: { icon: 'public/assets/Marker.svg' },
-        brewery: { icon:'public/assets/Marker.svg' },
-        vintageClothing: { icon:'public/assets/Marker.svg' },
-        vintageHousewares: { icon: 'public/assets/Marker.svg' },
-        cafes: { icon: 'public/assets/Marker.svg' }
+        design: { icon: './public/assets/Marker.svg' },
+        brand: { icon: './public/assets/Marker.svg' },
+        bike: { icon: './public/assets/Marker.svg' },
+        brewery: { icon:'./public/assets/Marker.svg' },
+        vintageClothing: { icon:'./public/assets/Marker.svg' },
+        vintageHousewares: { icon: './public/assets/Marker.svg' },
+        cafes: { icon: './public/assets/Marker.svg' }
     };
 
 
     // DESIGN SPOTS
-    const richnmond401 = { lat: 43.648138, lng: -79.394525 };
+    const richmond401 = { lat: 43.648138, lng: -79.394525 };
     const makeDen = { lat: 43.659047, lng: -79.440023 };
     const theShop = { lat: 43.652156, lng: -79.433989 };
     const artAndSole = { lat: 43.660275, lng: -79.329488 };
@@ -84,7 +84,7 @@ function initMap() {
     const harbourfront = { lat: 43.638749, lng: -79.382722 };
     
     const designSpots = [
-        { position: new google.maps.LatLng(richnmond401) },
+        { position: new google.maps.LatLng(richmond401) },
         { position: new google.maps.LatLng(makeDen) },
         { position: new google.maps.LatLng(theShop) },
         { position: new google.maps.LatLng(artAndSole) },
@@ -93,7 +93,7 @@ function initMap() {
         { position: new google.maps.LatLng(mocca) },
         { position: new google.maps.LatLng(designExchange) },
         { position: new google.maps.LatLng(artMetropole) },
-        { position: new google.maps.LatLng(harbourfront) },
+        { position: new google.maps.LatLng(harbourfront) }
     ];
 
     // Create markers
@@ -129,7 +129,7 @@ function initMap() {
         { position: new google.maps.LatLng(crywolf) },
         { position: new google.maps.LatLng(drakeGeneral) },
         { position: new google.maps.LatLng(northStandard) },
-        { position: new google.maps.LatLng(muttonhead) },
+        { position: new google.maps.LatLng(muttonhead) }
     ];
 
     // Create markers
@@ -165,7 +165,7 @@ function initMap() {
         { position: new google.maps.LatLng(bloodBrothers) },
         { position: new google.maps.LatLng(indieAle) },
         { position: new google.maps.LatLng(burdock) },
-        { position: new google.maps.LatLng(junction) },
+        { position: new google.maps.LatLng(junction) }
     ];
 
     // Create markers
@@ -223,19 +223,21 @@ function initMap() {
 } 
 
 
+// filter functionality goes here
+
 filterSelection("all")
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("spot");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+function filterSelection(content) {
+    let spot, i;
+    spot = document.getElementsByClassName("spot");
+    if (content == "all") content = "";
+    for (i = 0; i < spot.length; i++) {
+        RemoveClass(spot[i], "show");
+        if (spot[i].className.indexOf(content) > -1) AddClass(spot[i], "show");
     }
 }
 
 function AddClass(element, name) {
-    var i, arr1, arr2;
+    let i, arr1, arr2;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
     for (i = 0; i < arr2.length; i++) {
@@ -244,7 +246,7 @@ function AddClass(element, name) {
 }
 
 function RemoveClass(element, name) {
-    var i, arr1, arr2;
+    let i, arr1, arr2;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
     for (i = 0; i < arr2.length; i++) {
@@ -255,94 +257,16 @@ function RemoveClass(element, name) {
     element.className = arr1.join(" ");
 }
 
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
+const btnContainer = document.getElementById("myBtnContainer");
+const btns = btnContainer.getElementsByClassName("btn");
+for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
-        var current = document.getElementsByClassName("active");
+        const current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
     });
 }
 
-
-
-//     function filterToggleDisplay() {
-//         $('input[name=coffee]').click(function () {
-//         console.log('hello')
-
-//         $('.bar').toggleClass('hidden')
-//         $('.vintage').toggleClass('hidden')
-//     })
-//     $('input[name=bar]').click(function () {
-//         console.log('hello')
-
-//         $('.coffee').toggleClass('hidden')
-//         $('.vintage').toggleClass('hidden')
-//     })
-//     $('input[name=vintage]').click(function () {
-//         console.log('hello')
-
-//         $('.coffee').toggleClass('hidden')
-//         $('.bar').toggleClass('hidden')
-//     })
-// }
-// filterToggleDisplay();
-
-
-// let $filterCheckboxes = $('input[type="checkbox"]');
-
-// $filterCheckboxes.on('change', function () {
-
-//     const selectedFilters = {};
-
-//     $filterCheckboxes.filter(':checked').each(function () {
-
-//         if (!selectedFilters.hasOwnProperty(this.name)) {
-            
-//             selectedFilters[this.name] = [];
-//         }
-
-//         selectedFilters[this.name].push(this.value);
-        
-//     });
-
-//     // create a collection containing all of the filterable elements
-//     let $filteredResults = $('.spot');
-    
-//     // loop over the selected filter name -> (array) values pairs
-//     $.each(selectedFilters, function (name, filterValues) {
-
-//         // filter each .flower element
-//         $filteredResults = $filteredResults.filter(function () {
-
-//             let matched = false,
-//             currentFilterValues = $(this).data('category').split('');
-
-//             // loop over each category value in the current .flower's data-category
-//             $.each(currentFilterValues, function (_, currentFilterValue) {
-
-//                 // if the current category exists in the selected filters array
-//                 // set matched to true, and stop looping. as we're ORing in each
-//                 // set of filters, we only need to match once
-
-//                 if ($.inArray(currentFilterValue, filterValues) != -1) {
-//                     matched = true;
-//                     return false;
-//                 }
-//             });
-
-//             // if matched is true the current .flower element is returned
-//             return matched;
-
-//         });
-//     });
-
-//     $('.spot').hide().filter($filteredResults).show();
-//     console.log($filteredResults)
-// });
 
 
 
