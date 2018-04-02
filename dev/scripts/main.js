@@ -61,18 +61,18 @@ function initMap() {
 
     
     const icons = {
-        design: { icon: 'public/assets/Marker.svg' },
-        brand: { icon: 'public/assets/Marker.svg' },
-        bike: { icon: 'public/assets/Marker.svg' },
-        brewery: { icon:'public/assets/Marker.svg' },
-        vintageClothing: { icon:'public/assets/Marker.svg' },
-        vintageHousewares: { icon: 'public/assets/Marker.svg' },
-        cafes: { icon: 'public/assets/Marker.svg' }
+        design: { icon: './public/assets/Marker.svg' },
+        brand: { icon: './public/assets/Marker.svg' },
+        bike: { icon: './public/assets/Marker.svg' },
+        brewery: { icon:'./public/assets/Marker.svg' },
+        vintageClothing: { icon:'./public/assets/Marker.svg' },
+        vintageHousewares: { icon: './public/assets/Marker.svg' },
+        cafes: { icon: './public/assets/Marker.svg' }
     };
 
 
-    // ART & DESIGN SPOTS
-    const richnmond401 = { lat: 43.648138, lng: -79.394525 };
+    // DESIGN SPOTS
+    const richmond401 = { lat: 43.648138, lng: -79.394525 };
     const makeDen = { lat: 43.659047, lng: -79.440023 };
     const theShop = { lat: 43.652156, lng: -79.433989 };
     const artAndSole = { lat: 43.660275, lng: -79.329488 };
@@ -84,7 +84,7 @@ function initMap() {
     const harbourfront = { lat: 43.638749, lng: -79.382722 };
     
     const designSpots = [
-        { position: new google.maps.LatLng(richnmond401) },
+        { position: new google.maps.LatLng(richmond401) },
         { position: new google.maps.LatLng(makeDen) },
         { position: new google.maps.LatLng(theShop) },
         { position: new google.maps.LatLng(artAndSole) },
@@ -93,7 +93,7 @@ function initMap() {
         { position: new google.maps.LatLng(mocca) },
         { position: new google.maps.LatLng(designExchange) },
         { position: new google.maps.LatLng(artMetropole) },
-        { position: new google.maps.LatLng(harbourfront) },
+        { position: new google.maps.LatLng(harbourfront) }
     ];
 
     // Create markers
@@ -107,7 +107,7 @@ function initMap() {
     });
     
 
-    //LOCAL BRANDS
+    //TORONTO MAKERS
     const elevenThirty = { lat: 43.652528, lng: -79.433419 };
     const ynot = { lat: 43.668808, lng: -79.466622 };
     const tdm = { lat: 43.639014, lng: -79.443965 };
@@ -129,7 +129,7 @@ function initMap() {
         { position: new google.maps.LatLng(crywolf) },
         { position: new google.maps.LatLng(drakeGeneral) },
         { position: new google.maps.LatLng(northStandard) },
-        { position: new google.maps.LatLng(muttonhead) },
+        { position: new google.maps.LatLng(muttonhead) }
     ];
 
     // Create markers
@@ -165,7 +165,7 @@ function initMap() {
         { position: new google.maps.LatLng(bloodBrothers) },
         { position: new google.maps.LatLng(indieAle) },
         { position: new google.maps.LatLng(burdock) },
-        { position: new google.maps.LatLng(junction) },
+        { position: new google.maps.LatLng(junction) }
     ];
 
     // Create markers
@@ -220,35 +220,59 @@ function initMap() {
     const d = { lat: 4, lng: -7 };
     const m = { lat: 4, lng: -7 };
     const o = { lat: 4, lng: -7 };    
-}    
+} 
 
 
-    function filterToggleDisplay() {
-        $('input[name=coffee]').click(function () {
-        console.log('hello')
+// filter functionality goes here
 
-        $('.bar').toggleClass('hidden')
-        $('.vintage').toggleClass('hidden')
-    })
-    $('input[name=bar]').click(function () {
-        console.log('hello')
-
-        $('.coffee').toggleClass('hidden')
-        $('.vintage').toggleClass('hidden')
-    })
-    $('input[name=vintage]').click(function () {
-        console.log('hello')
-
-        $('.coffee').toggleClass('hidden')
-        $('.bar').toggleClass('hidden')
-    })
+filterSelection("all")
+function filterSelection(content) {
+    let spot, i;
+    spot = document.getElementsByClassName("spot");
+    if (content == "all") content = "";
+    for (i = 0; i < spot.length; i++) {
+        RemoveClass(spot[i], "show");
+        if (spot[i].className.indexOf(content) > -1) AddClass(spot[i], "show");
+    }
 }
-filterToggleDisplay();
+
+function AddClass(element, name) {
+    let i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+    }
+}
+
+function RemoveClass(element, name) {
+    let i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+    }
+    element.className = arr1.join(" ");
+}
+
+const btnContainer = document.getElementById("myBtnContainer");
+const btns = btnContainer.getElementsByClassName("btn");
+for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+        const current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
+
+
 
 
 // ***index????
-// var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-// var labelIndex = 0;
+// const labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//const labelIndex = 0;
 
 // // Create markers for design spots.
 // designSpots.forEach(function (location) {
@@ -264,7 +288,7 @@ filterToggleDisplay();
    // brewerySpots.forEach(function (location) {
 
     //     for (var i = 0; i < location.length; i++) {
-    //         var image = new google.maps.MarkerImage(
+    //        const image = new google.maps.MarkerImage(
     //             '{{http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=7}}' + (i + 1) + '|FF0000|000000x')
     //             // new google.maps.Size(68, 49),
     //             // new google.maps.Point(0, 0),

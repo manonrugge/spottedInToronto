@@ -1,4 +1,25 @@
 
-.about-label {
-    @include label();
+.the-idea {
+    position: relative;
+    margin: 100px auto;
+    background: $background;
+    padding: 100px 0px;
+    width: 95%;
+    p {
+        width: 80%;
+        margin: 0 auto;
+        @media (max-width: 540px) {
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+        }
+    }
 }
+
+.label-theIdea{
+    @include label();
+    left: -20px;
+    top: 0px;
+}
+
+
+
