@@ -61,13 +61,13 @@ function initMap() {
 
     
     const icons = {
-        design: { icon: './public/assets/Marker.svg' },
-        maker: { icon: './public/assets/Marker.svg' },
-        bike: { icon: './public/assets/Marker.svg' },
-        brewery: { icon:'./public/assets/Marker.svg' },
-        vintageClothing: { icon:'./public/assets/Marker.svg' },
-        vintageHousewares: { icon: './public/assets/Marker.svg' },
-        cafes: { icon: './public/assets/Marker.svg' }
+        design: { icon: './public/assets/marker-pastel01.svg' },
+        maker: { icon: './public/assets/marker-pastel02.svg' },
+        bike: { icon: './public/assets/marker-pastel03.svg' },
+        brewery: { icon:'./public/assets/marker-pastel04.svg' },
+        vintageClothing: { icon:'./public/assets/marker-pastel05.svg' },
+        vintageHousewares: { icon: './public/assets/marker-pastel02' },
+        cafes: { icon: './public/assets/marker-pastel02' }
     };
 
 
@@ -93,7 +93,7 @@ function initMap() {
             map: map,
             icon: icons['design'].icon,
             title: design[0],
-            label: { text: `${design[3]}`, color: "pink" }
+            label: { text: `${design[3]}`, color: "white" }
         });
     };
     
@@ -146,7 +146,7 @@ function initMap() {
             map: map,
             icon: icons['brewery'].icon,
             title: brewery[0],
-            label: {text: `${brewery[3]}`, color: "yellow" }
+            label: {text: `${brewery[3]}`, color: "white" }
         });
     };
 
