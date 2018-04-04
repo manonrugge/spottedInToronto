@@ -100,7 +100,7 @@ function initMap() {
     };
     
 
-    //TORONTO MAKERS
+    // CANADIAN MADE
     const makers = [
         ['Eleven Thirty', 43.652528, -79.433419, 1 ],
         ['YNOT', 43.668808, -79.466622, 2 ],

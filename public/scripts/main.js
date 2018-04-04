@@ -74,7 +74,7 @@ function initMap() {
         });
     };
 
-    //TORONTO MAKERS
+    // CANADIAN MADE
     var makers = [['Eleven Thirty', 43.652528, -79.433419, 1], ['YNOT', 43.668808, -79.466622, 2], ['Toronto Designer Market', 43.639014, -79.443965, 3], ['Peace Collective', 43.647199, -79.419655, 4], ['Bookhou', 43.651967, -79.408319, 5], ['Yo Sox', 43.647409, -79.402331, 6], ['Crywolf', 43.646244, -79.419370, 7], ['Drake General Store', 43.643021, -79.424441, 8], ['North Standard', 43.639327, -79.443600, 9], ['Muttonhead', 43.649292, -79.450086, 10]];
 
     // Create markers
