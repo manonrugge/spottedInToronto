@@ -12,6 +12,8 @@ header {
     margin-top: 70px;
   }
 }
+
+
 /* Style navigation */
 .header-nav ul {
   display: flex;
@@ -27,9 +29,15 @@ header {
   }
 }
 
+.link-nav {
+    text-decoration: none;
+    color: $primary;
+    &:visited {
+        color: black;
+    }
+}
 
-
-a:hover {
+.link-nav:hover {
   border-bottom: 2px solid $primary;
 }
 
