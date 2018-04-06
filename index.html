@@ -17,9 +17,9 @@
 	<header>
 		<nav class="header-nav">
 			<ul>
-				<li><a href="#spots">Spots</a></li>
-				<li><a href="#the-idea">The Idea</a></li>
-				<li><a href="">Recommendations</a></li>
+				<li><a class="link-nav" href="#spots">Spots</a></li>
+				<li><a class="link-nav" href="#the-idea">The Idea</a></li>
+				<li><a class="link-nav" href="">Recommendations</a></li>
 			</ul>
 		</nav>
 		<div class="label">
@@ -36,8 +36,10 @@
 		<div class="myBtnContainer" id="myBtnContainer">
 			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
 			<button class="btn" onclick="filterSelection('design')"> Design</button>
-			<button class="btn" onclick="filterSelection('toronto-makers')"> Toronto Makers</button>
+			<button class="btn" onclick="filterSelection('canadian-made')"> Canadian Made</button>
 			<button class="btn" onclick="filterSelection('micro-breweries')"> Micro-Breweries</button>
+			<button class="btn" onclick="filterSelection('vintage')"> Vintage</button>
+			<button class="btn" onclick="filterSelection('bars')"> Bars</button>
 		</div>
 	</section>
 	<!-- filter section end -->
@@ -50,9 +52,9 @@
 		<div class="spot design">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel02.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/richmond401.jpg" alt="richmond401 image">
+				<img class="spot-image" src="./public/assets/spots/richmond401.jpg" alt="richmond401 image">
 				<div class="spot-text">
 					<h2>Richmond 401</h2>
 					<h3>401 Richmond St West</h3>
@@ -63,9 +65,9 @@
 		<div class="spot design">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel02.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/makeden.jpg" alt="the make den image">
+				<img class="spot-image" src="./public/assets/spots/makeden.jpg" alt="the make den image">
 				<div class="spot-text">
 					<h2>The Make Den</h2>
 					<h3>1244 Bloor St West</h3>
@@ -76,9 +78,9 @@
 		<div class="spot design">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel02.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/theshop.jpg" alt="the shop image">
+				<img class="spot-image" src="./public/assets/spots/theshop.jpg" alt="the shop image">
 				<div class="spot-text">
 					<h2>The Shop</h2>
 					<h3>1139 College Street</h3>
@@ -89,9 +91,22 @@
 		<div class="spot design">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel02.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/workroom.jpg" alt="workroom image">
+				<img class="spot-image" src="./public/assets/spots/artandsole.jpg" alt="richmond401 image">
+				<div class="spot-text">
+					<h2>Art And Sole Academy</h2>
+					<h3>20 Leslie Street</h3>
+					<h4>Design</h4>
+				</div>
+			</div>
+		</div>
+		<div class="spot design">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel02.svg" alt="marker-icon">
+				</div>
+				<img class="spot-image" src="./public/assets/spots/workroom.jpg" alt="workroom image">
 				<div class="spot-text">
 					<h2>The Workroom</h2>
 					<h3>1267 Queen St West</h3>
@@ -102,9 +117,9 @@
 		<div class="spot design">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel02.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/artscape.jpg" alt="artscape youngplace image">
+				<img class="spot-image" src="./public/assets/spots/artscape.jpg" alt="artscape youngplace image">
 				<div class="spot-text">
 					<h2>Artscape Youngplace</h2>
 					<h3>180 Shaw Street</h3>
@@ -112,82 +127,153 @@
 				</div>
 			</div>
 		</div>
-		 
-		<!-- toronto makers spots -->
-		<div class="spot toronto-makers">
+		<div class="spot design">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel02.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/eleventhirty.jpg" alt="elevenThirty">
+				<img class="spot-image" src="./public/assets/spots/artmetropole.jpg" alt="art metropole shop image">
+				<div class="spot-text">
+					<h2>Art Metropole</h2>
+					<h3>1490 Dundas St West</h3>
+					<h4>Design</h4>
+				</div>
+			</div>
+		</div>
+		<div class="spot design">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel02.svg" alt="marker-icon">
+				</div>
+				<img class="spot-image" src="./public/assets/spots/victoire.jpg" alt="victoire shop image">
+				<div class="spot-text">
+					<h2>Victoire Boutique</h2>
+					<h3>129A Ossington Ave</h3>
+					<h4>Design</h4>
+				</div>
+			</div>
+		</div>
+		 
+		<!-- toronto makers spots -->
+		<div class="spot canadian-made">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel01.svg" alt="marker-icon">
+				</div>
+				<img class="spot-image" src="./public/assets/spots/eleventhirty.jpg" alt="elevenThirty">
 				<h2>Eleven Thirty</h2>
 				<h3>1130 College Street</h3>
 				<h4>Toronto Makers</h4>
 			</div>
 		</div>
-		<div class="spot toronto-makers">
+		<div class="spot canadian-made">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel01.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/ynot.jpg" alt="ynot">
+				<img class="spot-image" src="./public/assets/spots/ynot.jpg" alt="ynot">
 				<h2>YNOT</h2>
 				<h3>500 Keele St unit 102</h3>
 				<h4>Toronto Makers</h4>
 			</div>
 		</div>
-		<div class="spot toronto-makers">
+		<div class="spot canadian-made">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel01.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/tdm.jpg" alt="Toronto Designers Market">
+				<img class="spot-image" src="./public/assets/spots/tdm.jpg" alt="Toronto Designers Market">
 				<h2>Toronto Designers Market</h2>
 				<h3>1605 Queen St West</h3>
 				<h4>Toronto Makers</h4>
 			</div>
 		</div>
-		<div class="spot toronto-makers">
+		<div class="spot canadian-made">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel01.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/peacecollective.jpg" alt="Peace Collective">
+				<img class="spot-image" src="./public/assets/spots/peacecollective.jpg" alt="Peace Collective">
 				<h2>Peace Collective</h2>
 				<h3>131 Ossington Ave</h3>
 				<h4>Toronto Makers</h4>
 			</div>
 		</div>
-		<div class="spot toronto-makers">
+		<div class="spot canadian-made">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel01.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/bookhou.jpg" alt="Bookhou">
+				<img class="spot-image" src="./public/assets/spots/bookhou.jpg" alt="Bookhou">
 				<h2>Bookhou</h2>
 				<h3>798 Dundas St West</h3>
 				<h4>Toronto Makers</h4>
 			</div>
 		</div>
-		<div class="spot toronto-makers">
+		<div class="spot canadian-made">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel01.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/drakeGeneral.jpg" alt="Drake General Store">
+				<img class="spot-image" src="./public/assets/spots/drakeGeneral.jpg" alt="Drake General Store">
 				<h2>Drake General Store</h2>
 				<h3>1151 Queen St West</h3>
 				<h4>Toronto Makers</h4>
 			</div>
 		</div>
+		<div class="spot canadian-made">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel01.svg" alt="marker-icon">
+				</div>
+				<img class="spot-image" src="./public/assets/spots/yosox.jpg" alt="Yo Sox Store">
+				<h2>Yo Sox</h2>
+				<h3>607 Queen St West</h3>
+				<h4>Toronto Makers</h4>
+			</div>
+		</div>
+		<div class="spot canadian-made">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel01.svg" alt="marker-icon">
+				</div>
+				<img class="spot-image" src="./public/assets/spots/crywolf.jpg" alt="Crywolf Store">
+				<h2>Crywolf</h2>
+				<h3>691 Ossington Ave</h3>
+				<h4>Toronto Makers</h4>
+			</div>
+		</div>
+		<div class="spot canadian-made">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel01.svg" alt="marker-icon">
+				</div>
+				<img class="spot-image" src="./public/assets/spots/northstandard.jpg" alt="North Standard Store">
+				<h2>North Standard</h2>
+				<h3>1662 Queen St West</h3>
+				<h4>Toronto Makers</h4>
+			</div>
+		</div>
+		<div class="spot canadian-made">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel01.svg" alt="marker-icon">
+				</div>
+				<img class="spot-image" src="./public/assets/spots/muttonhead.jpg" alt="Muttonhead Store">
+				<h2>Muttonhead</h2>
+				<h3>337 Roncesvalles Ave</h3>
+				<h4>Toronto Makers</h4>
+			</div>
+		</div>
+
 
 		<!-- micro-breweries spots -->
 		<div class="spot micro-breweries">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel04.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/bandit.jpg" alt="Bandit brewery">
+				<img class="spot-image" src="./public/assets/spots/bandit.jpg" alt="Bandit brewery">
 				<h2>Bandit Brewery</h2>
 				<h3>2125 Dundas St West</h3>
 				<h4>Micro-Breweries</h4>
@@ -196,9 +282,9 @@
 		<div class="spot micro-breweries">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel04.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/halo.jpg" alt="halo brewery">
+				<img class="spot-image" src="./public/assets/spots/halo.jpg" alt="halo brewery">
 				<h2>Halo Brewery</h2>
 				<h3>247 Wallace Ave</h3>
 				<h4>Micro-Breweries</h4>
@@ -207,9 +293,9 @@
 		<div class="spot micro-breweries">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel04.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/henderson.jpg" alt="henderson brewery">
+				<img class="spot-image" src="./public/assets/spots/henderson.jpg" alt="henderson brewery">
 				<h2>Henderson Brewing co</h2>
 				<h3>128 Sterling Road</h3>
 				<h4>Micro-Breweries</h4>
@@ -218,9 +304,9 @@
 		<div class="spot micro-breweries">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel04.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/laylow.jpg" alt="laylow brewery">
+				<img class="spot-image" src="./public/assets/spots/laylow.jpg" alt="laylow brewery">
 				<h2>Laylow Brewery</h2>
 				<h3>1144 College Street</h3>
 				<h4>Micro-Breweries</h4>
@@ -229,18 +315,213 @@
 		<div class="spot micro-breweries">
 			<div class="content">
 				<div>
-					<img class="marker" src="./public/assets/Marker.svg" alt="marker-icon">
+					<img class="marker" src="./public/assets/marker-pastel04.svg" alt="marker-icon">
 				</div>
-				<img class="spot-image" src="./public/assets/bellwoods.jpg" alt="bellwoods brewery">
+				<img class="spot-image" src="./public/assets/spots/bellwoods.jpg" alt="bellwoods brewery">
 				<h2>Bellwoods Brewery</h2>
 				<h3>124 Ossington Ave</h3>
 				<h4>Micro-Breweries</h4>
 			</div>
 		</div>
+		<div class="spot micro-breweries">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel04.svg" alt="marker-icon">
+				</div>
+				<img class="spot-image" src="./public/assets/spots/bloodbrothers.jpg" alt="blood brothers brewery">
+				<h2>Blood Brothers Brewing</h2>
+				<h3>165 Geary Ave</h3>
+				<h4>Micro-Breweries</h4>
+			</div>
+		</div>
+		<div class="spot micro-breweries">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel04.svg" alt="marker-icon">
+				</div>
+				<img class="spot-image" src="./public/assets/spots/indiealehouse.jpg" alt="Indie Alehouse brewery">
+				<h2>Indie Ale house</h2>
+				<h3>2876 Dundas St West</h3>
+				<h4>Micro-Breweries</h4>
+			</div>
+		</div>
+		<div class="spot micro-breweries">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel04.svg" alt="marker-icon">
+				</div>
+				<a href="http://burdockto.com/" target="_blank"><img class="spot-image" src="./public/assets/spots/burdock.jpg" alt="Burdock brewery"></a>
+				<h2>Burdock</h2>
+				<h3>1184 Bloor St West</h3>
+				<h4>Micro-Breweries</h4>
+			</div>
+		</div>
+		<div class="spot micro-breweries">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel04.svg" alt="marker-icon">
+				</div>
+				<a href="http://www.leftfieldbrewery.ca/" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/leftfield.jpg" alt="Left Field Brewery">
+				</a>
+				<h2>Left Field Brewery</h2>
+				<h3>36 Wagstaff Drive</h3>
+				<h4>Micro-Breweries</h4>
+			</div>
+		</div>
+
+		<!-- vintage spots -->
+		<div class="spot vintage">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel05.svg" alt="marker-icon">
+				</div>
+				<a href="https://www.chosen-vintage.com/" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/chosen.jpg" alt="Chosen vintage store">
+				</a>
+				<h2>Chosen</h2>
+				<h3>1599 Dundas St West</h3>
+				<h4>Vintage Clothing</h4>
+			</div>
+		</div>
+		<div class="spot vintage">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel05.svg" alt="marker-icon">
+				</div>
+				<a href="http://www.pennyarcadevintage.com/" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/pennyarcade.jpg" alt="Chosen vintage store">
+				</a>
+				<h2>Penny Arcade</h2>
+				<h3>1177 Dundas St West</h3>
+				<h4>Vintage Clothing</h4>
+			</div>
+		</div>
+		<div class="spot vintage">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel05.svg" alt="marker-icon">
+				</div>
+				<a href="https://www.youbabe.ca/" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/youbabe.jpg" alt="You, Babe store">
+				</a>
+				<h2>You, Babe</h2>
+				<h3>1177 Dundas St West</h3>
+				<h4>Vintage Clothing</h4>
+			</div>
+		</div>
+		<div class="spot vintage">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel05.svg" alt="marker-icon">
+				</div>
+				<a href="http://publicbutter.com/" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/publicbutter.jpg" alt="Public Butter store">
+				</a>
+				<h2>Public Butter</h2>
+				<h3>1290 Queen St West</h3>
+				<h4>Vintage Clothing</h4>
+			</div>
+		</div>
+		<div class="spot vintage">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel05.svg" alt="marker-icon">
+				</div>
+				<a href="" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/huizenga.jpg" alt="Public Butter store">
+				</a>
+				<h2>Mrs. Huizenga</h2>
+				<h3>28 Roncesvalles Ave</h3>
+				<h4>Vintage Houseware</h4>
+			</div>
+		</div>
+		<div class="spot vintage">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel05.svg" alt="marker-icon">
+				</div>
+				<a href="http://www.williamsdesign.ca/" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/williams.jpg" alt="Williams Design store">
+				</a>
+				<h2>Williams Design</h2>
+				<h3>387 Keele St</h3>
+				<h4>Vintage Houseware</h4>
+			</div>
+		</div>
+		<div class="spot vintage">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel05.svg" alt="marker-icon">
+				</div>
+				<a href="https://www.elephantintheattic.ca/" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/elephant.jpg" alt="Williams Design store">
+				</a>
+				<h2>Elephant In The Attic</h2>
+				<h3>1596 Dundas St West</h3>
+				<h4>Vintage Houseware</h4>
+			</div>
+		</div>
+
+		<!-- bars spots -->
+		<div class="spot bars">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel07.svg" alt="marker-icon">
+				</div>
+				<a href="" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/sweatybettys.jpg" alt="Sweaty Bettys">
+				</a>
+				<h2>Sweaty Betty's</h2>
+				<h3>13 Ossington Ave</h3>
+				<h4>Bar</h4>
+			</div>
+		</div>
+		<div class="spot bars">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel07.svg" alt="marker-icon">
+				</div>
+				<a href="" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/pharmacy.jpg" alt="Pharmacy">
+				</a>
+				<h2>Pharmacy</h2>
+				<h3>1318 King St West</h3>
+				<h4>Bar</h4>
+			</div>
+		</div>
+		<div class="spot bars">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel07.svg" alt="marker-icon">
+				</div>
+				<a href="http://www.blackdicecafe.com/" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/blackdice.jpg" alt="Black Dice bar">
+				</a>
+				<h2>Black Dice Cafe</h2>
+				<h3>1574 Dundas St West</h3>
+				<h4>Bar</h4>
+			</div>
+		</div>
+		<div class="spot bars">
+			<div class="content">
+				<div>
+					<img class="marker" src="./public/assets/marker-pastel07.svg" alt="marker-icon">
+				</div>
+				<a href="" target="_blank">
+					<img class="spot-image" src="./public/assets/spots/comdaugh.jpg" alt="Communist Daughter">
+				</a>
+				<h2>Communist Daughter</h2>
+				<h3>1149 Dundas St West</h3>
+				<h4>Bar</h4>
+			</div>
+		</div>
+		 
 	<!-- spots gallery grid end -->
 
 	</section>
 	<!-- about section start -->
+<<<<<<< HEAD
 	<section id="the-idea" class="the-idea">
 		<div class="label-theIdea">
 			<img class="label-image" src="./public/assets/about.svg" alt="">
@@ -249,7 +530,7 @@
 			<p> <span> Discover Local hot Spots</span> <br><br>We love traveling, exploring new cities and faraway lands. However, it's not always easy to get good tips on what to do in a city you don't know. This app showcases all our favourite Toronto spots so that we can share our knowledge and love for this city! Send this app to friends, visitors and curious locals.
 			<br>
 			<br>
-			This curated list is complied with a love for the small, the local, the fair, the unusual and the beautiful non-commercial entrepreneurs whose shops we don’t want you to walk by. Discover Toronto’s homemade beers, meet Toronto makers, relax at a cafe, find the perfect vintage piece or try out some bike routes. Any and all recommendations welcome!
+			This curated list is complied with a love for the small, the local, the fair, the unusual and the beautiful non-commercial entrepreneurs whose shops we don’t want you to walk by. Discover Toronto’s homemade beers, meet Toronto makers, relax at a cafe, find the perfect vintage piece or try out some bike routes.
 			<br>
 			<br>
 			xoxo Christina and Manon	

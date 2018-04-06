@@ -46,14 +46,6 @@ ul {
     margin: 0;
 }
 
-a {
-    text-decoration: none;
-    color: $primary;
-    &:visited {
-        color: black;
-    }
-}
-
 p {
     font-size: 2rem;
     line-height: 3rem;

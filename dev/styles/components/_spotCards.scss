@@ -15,7 +15,6 @@
     }
 }
 
-
 .spots {
     display: flex;
     flex-direction: row;
@@ -29,13 +28,18 @@
     display: none; /* Hide all elements by default */
     @media (max-width: 1060px) {
         width: calc(33.33% - 40px);
+        margin: 50px auto;
     }
     @media (max-width: 960px) {
         width: calc(50% - 40px);
+        margin: 50px auto;
     }
     @media (max-width: 540px) {
         width: calc(100% - 40px);
         margin: 25px auto;
+    }
+    img:hover {
+        border: 2px solid $primary;
     }
 }
 
