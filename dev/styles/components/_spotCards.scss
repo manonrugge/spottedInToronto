@@ -23,6 +23,7 @@
 }
 
 .spot {
+    
     @include spotCard();
     width: calc(25% - 40px);
     position: relative;
