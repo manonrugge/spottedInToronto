@@ -1,0 +1,69 @@
+#recommendations{
+    position: relative;
+    margin: 100px 0;
+}
+
+.label-reco{
+    position: absolute;
+    z-index: 999;
+    width: 250px;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    left: 50px;
+    top: -20px;
+}
+
+form{
+   font-size: 2rem;
+   padding-top: 90px;
+   
+   .form-container {
+       width:80%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        label{
+            color: $primary;
+            display: block;
+            padding-top: 50px;
+        }
+        
+        input{
+            border:none;
+            width: 100%;
+            border-bottom: 3px solid $primary;
+            display: block;
+            margin:20px 0 0 0;
+        }
+
+        textarea{
+            // float: left;
+            border:none;
+            border:3px solid $primary;
+            clear: both;
+            color: grey;
+            padding: 10px 4px;
+            margin-top: 20px;
+        }
+        
+        .submit-button{
+            border: 3px solid $primary;
+            background-color: white;
+            color: $primary;
+            padding: 5px 8px;
+            width: 150px;
+            height: 40px;
+        }
+    }
+}
+
+.input{
+    width: calc(50% - 20px);
+    margin-right: 20px;
+}
+
+.submit{
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+}

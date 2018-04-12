@@ -518,19 +518,18 @@
 		</div>
 		 
 	<!-- spots gallery grid end -->
-
 	</section>
+
 	<!-- about section start -->
-<<<<<<< HEAD
 	<section id="the-idea" class="the-idea">
 		<div class="label-theIdea">
 			<img class="label-image" src="./public/assets/about.svg" alt="">
 		</div>
 		<div class="wrapper">	
-			<p> <span> Discover Local hot Spots</span> <br><br>We love traveling, exploring new cities and faraway lands. However, it's not always easy to get good tips on what to do in a city you don't know. This app showcases all our favourite Toronto spots so that we can share our knowledge and love for this city! Send this app to friends, visitors and curious locals.
+			<p> <span> Discover Local hot Spots</span> <br><br>We love traveling, exploring new cities and faraway lands. However, it's not always easy to get good tips on what to do in a city you don't know. This app showcases all our favourite Toronto spots so that we can share our knowledge and love for this city with friends, visitors and curious locals.
 			<br>
 			<br>
-			This curated list is complied with a love for the small, the local, the fair, the unusual and the beautiful non-commercial entrepreneurs whose shops we don’t want you to walk by. Discover Toronto’s homemade beers, meet Toronto makers, relax at a cafe, find the perfect vintage piece or try out some bike routes.
+			The curated lists are complied with a love for the small, the local, the fair, the unusual and the beautiful non-commercial entrepreneurs whose shops we don’t want you to walk by. Discover Toronto’s homemade beers, meet Toronto makers, relax at a cafe, find the perfect vintage piece or try out some bike routes.
 			<br>
 			<br>
 			xoxo Christina and Manon	
@@ -541,21 +540,31 @@
 
 
 	<!-- recommendations section start -->
-	<section>
-		<div class="label-theIdea">
-			<img class="label-image" src="" alt="">
+	<section id="recommendations">
+		<div>
+			<img class="label-reco" src="./public/assets/about.svg" alt="">
 		</div>
-			<form action="https://api.formbucket.com/f/buk_HeJfHXfSrINCzPxN1TvtTMxW" method="POST" class="clearfix">
-				<label for="spot" class="visuallyhidden">YOUR FAVOURITE SPOT</label>
-				<input type="text" class="name" placeholder="Name" name="user-name">
-				
-				<label for="name" class="visuallyhidden">Location</label>
-				<input type="text" class="name" placeholder="Location" name="user-name">
-				
-				<label for="message" class="visuallyhidden">Message</label>
-				<textarea name="message" placeholder="Your message" id="messageBox" cols="30" rows="7"></textarea>
-				
-				<input type="submit" class ="send" value="Send" >
+			<form action="https://api.formbucket.com/f/buk_HeJfHXfSrINCzPxN1TvtTMxW" method="POST" class="wrapper clearfix">
+				<div class="form-container">
+					<div class="input faveSpot">
+						<label for="spot" >YOUR FAVOURITE SPOT</label>					
+						<input type="text" class="name input-container" placeholder="Name" name="user-input">
+					</div>
+					
+					<div class="input location">
+						<label for="name">LOCATION</label>
+						<input type="text" class="name input-container" placeholder="Location" name="user-input">
+					</div>	
+					
+					<div class="input message">
+						<label for="message">MESSAGE</label>
+						<textarea class="input-container"name="message" placeholder="Your message" id="messageBox" cols="30" rows="7" name="user-input">Message</textarea>
+					</div>
+					
+					<div class="input submit">
+						<input type="submit" class ="submit-button" value="SUBMIT">
+					</div>
+				</div>
 			</form>
 	</section>
 	<!-- recommendations section end -->
@@ -569,7 +578,9 @@
 	<!-- page scripts go here -->
 	<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5HB93S_2yu6XjRk1LxECp06lcZMYImFA&callback=initMap" type="text/javascript"></script>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
+
+
 	<script src="./public/scripts/main.js"></script>
 
 	 

@@ -258,7 +258,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin-bottom: 80px; }
 
 .spot {
   background: #fff;
@@ -367,3 +368,67 @@ h4 {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   left: -20px;
   top: 0px; }
+
+#recommendations {
+  position: relative;
+  margin: 100px 0; }
+
+.label-reco {
+  position: absolute;
+  z-index: 999;
+  width: 250px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  left: 50px;
+  top: -20px; }
+
+form {
+  font-size: 2rem;
+  padding-top: 90px; }
+  form .form-container {
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    form .form-container label {
+      color: #F04E23;
+      display: block;
+      padding-top: 50px; }
+    form .form-container input {
+      border: none;
+      width: 100%;
+      border-bottom: 3px solid #F04E23;
+      display: block;
+      margin: 20px 0 0 0; }
+    form .form-container textarea {
+      border: none;
+      border: 3px solid #F04E23;
+      clear: both;
+      color: grey;
+      padding: 10px 4px;
+      margin-top: 20px; }
+    form .form-container .submit-button {
+      border: 3px solid #F04E23;
+      background-color: white;
+      color: #F04E23;
+      padding: 5px 8px;
+      width: 150px;
+      height: 40px; }
+
+.input {
+  width: calc(50% - 20px);
+  margin-right: 20px; }
+
+.submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
