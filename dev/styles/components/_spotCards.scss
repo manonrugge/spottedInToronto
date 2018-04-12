@@ -19,9 +19,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 80px;
 }
 
 .spot {
+    
     @include spotCard();
     width: calc(25% - 40px);
     position: relative;

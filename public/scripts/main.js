@@ -45,7 +45,8 @@ function initMap() {
     var icons = {
         maker: { icon: './public/assets/marker-pastel01.svg' }, //maker green labels
         design: { icon: './public/assets/marker-pastel02.svg' }, //design red/orange labels
-        bike: { icon: './public/assets/Marker.svg' }, //bike pink labels
+        bike: { icon: './public/assets/Marker.svg' },
+        //bike pink labels
         brewery: { icon: './public/assets/marker-pastel04.svg' }, //brewery yellow labels
         vintageClothing: { icon: './public/assets/marker-pastel05.svg' }, //vintageClothing grey/dark blue labels
         vintageHousewares: { icon: './public/assets/marker-pastel05.svg' }, //vintageHousewares grey/blue labels
@@ -70,14 +71,16 @@ function initMap() {
             map: map,
             icon: icons['design'].icon,
             title: design[0],
-            label: { text: '' + design[3], color: "white" }
+            label: { text: '' + design[3], color: "white" },
+            // animation: google.maps.Animation.DROP
+            animation: google.maps.Animation.DROP
         });
     };
 
     // CANADIAN MADE
     var makers = [['Eleven Thirty', 43.652528, -79.433419, 1], ['YNOT', 43.668808, -79.466622, 2], ['Toronto Designer Market', 43.639014, -79.443965, 3], ['Peace Collective', 43.647199, -79.419655, 4], ['Bookhou', 43.651967, -79.408319, 5], ['Yo Sox', 43.647409, -79.402331, 6], ['Crywolf', 43.646244, -79.419370, 7], ['Drake General Store', 43.643021, -79.424441, 8], ['North Standard', 43.639327, -79.443600, 9], ['Muttonhead', 43.649292, -79.450086, 10]];
 
-    // Create markers
+    // Create markers for makers (say that 20 times)
     for (var _i = 0; _i < makers.length; _i++) {
         var maker = makers[_i];
         var _marker = new google.maps.Marker({
@@ -85,7 +88,8 @@ function initMap() {
             map: map,
             icon: icons['maker'].icon,
             title: maker[0],
-            label: { text: '' + maker[3], color: "white" }
+            label: { text: '' + maker[3], color: "white" },
+            animation: google.maps.Animation.DROP
         });
     };
 
@@ -216,8 +220,16 @@ for (var i = 0; i < btns.length; i++) {
     });
 }
 
-$('.link-nav').on('click', function () {
-    $('html').animate({
-        scrollTop: $('#spots').offset().top
-    }, 1000);
+// $('.link-nav').on('click', function () {
+//     $('html').animate({
+//         scrollTop: $('#spots').offset().top
+//     }, 1000);
+// });
+
+// smooth scroll on all <a> tags
+$(function () {
+    $('a').smoothScroll({
+        offset: 0,
+        speed: 600
+    });
 });

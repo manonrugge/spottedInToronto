@@ -63,7 +63,8 @@ function initMap() {
     const icons = {
         maker: { icon: './public/assets/marker-pastel01.svg' }, //maker green labels
         design: { icon: './public/assets/marker-pastel02.svg' }, //design red/orange labels
-        bike: { icon: './public/assets/Marker.svg' }, //bike pink labels
+        bike: { icon: './public/assets/Marker.svg' }, 
+        //bike pink labels
         brewery: { icon: './public/assets/marker-pastel04.svg' }, //brewery yellow labels
         vintageClothing: { icon: './public/assets/marker-pastel05.svg' }, //vintageClothing grey/dark blue labels
         vintageHousewares: { icon: './public/assets/marker-pastel05.svg' }, //vintageHousewares grey/blue labels
@@ -95,7 +96,9 @@ function initMap() {
             map: map,
             icon: icons['design'].icon,
             title: design[0],
-            label: { text: `${design[3]}`, color: "white" }
+            label: { text: `${design[3]}`, color: "white" },
+            // animation: google.maps.Animation.DROP
+            animation: google.maps.Animation.DROP
         });
     };
     
@@ -114,7 +117,7 @@ function initMap() {
         ['Muttonhead', 43.649292, -79.450086, 10 ],
     ];
 
-    // Create markers
+    // Create markers for makers (say that 20 times)
     for (let i = 0; i < makers.length; i++) {
         const maker = makers[i];
         const marker = new google.maps.Marker({
@@ -122,7 +125,8 @@ function initMap() {
             map: map,
             icon: icons['maker'].icon,
             title: maker[0],
-            label: { text: `${maker[3]}`, color: "white" }
+            label: { text: `${maker[3]}`, color: "white" },
+            animation: google.maps.Animation.DROP,
         });
     };
 
@@ -278,8 +282,16 @@ for (let i = 0; i < btns.length; i++) {
 
 
 
-$('.link-nav').on('click', function () {
-    $('html').animate({
-        scrollTop: $('#spots').offset().top
-    }, 1000);
+// $('.link-nav').on('click', function () {
+//     $('html').animate({
+//         scrollTop: $('#spots').offset().top
+//     }, 1000);
+// });
+
+// smooth scroll on all <a> tags
+$(function () {
+    $('a').smoothScroll({
+        offset: 0,
+        speed: 600
+    });
 });
