@@ -1,24 +1,35 @@
 #recommendations{
-    position: relative;
-    margin: 100px 0;
+    
+    // margin: 100px 0;
+    padding: 75px 0px;
 }
+
+.recommendations {
+    position: relative;
+}
+
 
 .label-reco{
     position: absolute;
     z-index: 999;
-    width: 250px;
+    width: 500px;
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     left: 50px;
     top: -20px;
+    @media (max-width: 660px){
+        width: 250px;
+    }
 }
 
 form{
-   font-size: 2rem;
-   padding-top: 90px;
-   
+    font-size: 2rem;
+    padding-top: 90px;
+    @media (max-width: 660px){
+        padding-top: 20px;
+    }
    .form-container {
-       width:80%;
+        width:80%;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
@@ -26,52 +37,68 @@ form{
             color: $primary;
             display: block;
             padding-top: 50px;
+          
         }
         
         input{
             border:none;
             width: 100%;
-            border-bottom: 3px solid $primary;
+            font-size: 1.5rem;
+            border-bottom: 2px solid $secondary;
             display: block;
             margin:20px 0 0 0;
         }
 
         textarea{
             // float: left;
-            border:none;
-            border:3px solid $primary;
+            outline: none;
+            border: 2px solid $secondary;
             clear: both;
-            color: grey;
-            padding: 10px 4px;
+            resize: none;
+            font-size: 1.5rem;
+            // color: $secondary;
+            padding: 20px 10px;
             margin-top: 20px;
+            width: 100%;
+            border-radius: 2px;
         }
         
         .submit-button{
-            border: 3px solid $primary;
+            border: 2px solid $primary;
             background-color: white;
             color: $primary;
+            border-radius: 2px;
             padding: 5px 8px;
             width: 110px;
             height: 40px;
             transition: all 0.5s ease;
              &:hover{
                 color:white;
-                background: red;
+                background: $primary;
             }
         }
        
     }
 }
 
-.input{
+.input {
     width: calc(50% - 20px);
     margin-right: 20px;
+}
+
+.input-container {
+    color: $secondary;
+}
+
+.message {
+    width: calc(100% - 20px);
 }
 
 .submit{
     display: flex;
     justify-content:flex-end;
     align-items: flex-end;
+    width: 100%;
 }
 
 @media (max-width: 920px){

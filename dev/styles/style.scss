@@ -37,7 +37,7 @@ body{
 
 span {
     color: $primary;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     line-height: 4rem;
 }
 
@@ -60,6 +60,9 @@ h2 {
 h3 {
     font-size: 1.4rem;
     margin: 0;
+    @media (max-width: 660px) {
+        font-size: 1.2rem;
+    }
 } 
 
 h4 {
